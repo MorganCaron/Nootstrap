@@ -1,0 +1,111 @@
+@import ../../nootstrap/nootstrap
+
+$white: #EEEEEE
+$lightgrey: #BBBBBB
+$grey: #888888
+$darkgrey: #333333
+$black: #222222
+$alpha-lightgrey: rgba($darkgrey, 0.3)
+$alpha-grey: rgba($darkgrey, 0.5)
+$alpha-darkgrey: rgba($darkgrey, 0.9)
+$blue: #008CBA
+$gold: #FFD700
+$aqua: #64E6E3
+$purple: #965FF9
+
+body
+	+select(none)
+	background-color: $white
+
+.container, .container-fluid
+	+select(text)
+
++scrollbar(12px, $blue, $darkgrey)
+
+.scroll-arrow
+	width: 40px
+	height: 40px
+	position: absolute
+	bottom: 25px
+	left: 50%
+	transform: translateX(-50%)
+	background-image: url("../img/assets/arrow.png")
+	background-position: 0 0
+	+scrollArrow(3s)
+
+a
+	color: $blue
+
+hr
+	margin-top: 20px
+	margin-bottom: 20px
+	border: 0
+	border-top: 1px solid $grey
+
+blockquote
+	border-left-width: 5px
+	background-color: white
+
+.btn-outline
+	color: white
+	background-image: none
+	background-color: transparent
+	border-color: white
+	&:hover
+		color: $black
+		background-color: white
+
+.navbar
+	+select(none)
+	background-color: $alpha-darkgrey
+	font-size: 1rem
+	color: white
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125)
+	&.onTop
+		background-color: $alpha-lightgrey
+	.navbar-brand
+		width: 200px
+		color: white
+	.navbar-nav
+		.nav-item a
+			color: white
+
+=brackets
+	border-style: solid
+	border-image: url('../img/assets/brackets.png') 0 48 fill stretch
+.large-brackets
+	+brackets
+	border-width: 10px 48px
+.medium-brackets
+	+brackets
+	border-width: 0px 24px
+.small-brackets
+	+brackets
+	border-width: 0px 12px
+
+.lightgreybar
+	+bar($darkgrey, $lightgrey)
+.greybar
+	+bar($darkgrey, $grey)
+.darkgreybar
+	+bar($white, $darkgrey)
+.blackbar
+	+bar(white, $black)
+.bluebar
+	+bar(white, $blue)
+
+=mountains-background
+	+background-cover("../img/background/mountains.jpg")
+	background-color: $darkgrey
+	color: white
+=white-background
+	+background-pattern("../img/background/white-background.png")
+	background-color: $background-color
+=grey-background
+	+background-pattern("../img/background/grey-background.png")
+	background-color: $darkgrey
+	color: white
+=darkgrey-background
+	+background-pattern("../img/background/darkgrey-background.png")
+	background-color: $darkgrey
+	color: white

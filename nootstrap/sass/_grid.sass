@@ -1,0 +1,37 @@
+body
+	+select(none)
+
+.container, .container-fluid
+    +select(text)
+    padding-left: 15px
+    padding-right: 15px
+
+.container
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+
+@media (min-width: 576px)
+	.container
+	    max-width: 540px
+@media (min-width: 768px)
+	.container
+	    max-width: 720px
+@media (min-width: 992px)
+	.container
+	    max-width: 960px
+@media (min-width: 1200px)
+	.container
+	    max-width: 1140px
+
+.row
+	display: flex
+	flex-direction: row
+    flex-wrap: wrap
+    margin-right: -15px
+    margin-left: -15px
+	@for $width from 1 through 12
+		.col-#{$width}
+			-ms-flex-basis: ($width / 12) * 100%
+			flex-basis: ($width / 12) * 100%
+			max-width: ($width / 12) * 100%

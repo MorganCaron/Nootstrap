@@ -1,0 +1,43 @@
+body
+    margin: 0
+    +select(text)
+
+=decoration($type)
+	&, &:hover, &:active
+		text-decoration: $type
+
+=ellipsis
+	overflow: hidden
+	text-overflow: ellipsis
+	line-height: 1.25
+
+.text-left
+    text-align: left
+.text-center
+    text-align: center
+.text-right
+    text-align: right
+
+textarea
+    max-width: 100%
+
+pre
+    border: initial
+    background-color: initial
+    color: inherit
+    white-space: pre-line
+    word-break: break-word
+    word-wrap: break-word
+
+a
+	touch-action: manipulation
+	+decoration(none)
+
+h1, h2, h3, h4, h5, h6
+	margin-top: 0
+	&, p
+		+select(text)
+
+.lead
+    font-size: 1rem
+    font-weight: 300

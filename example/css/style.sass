@@ -1,0 +1,39 @@
+@import theme
+
+.changeOnTop
+	+transition(all 1s)
+
+body > header
+	min-height: 100vh
+	.parallax-background
+		+mountains-background
+	.parallax-content
+		.card
+			background-color: $alpha-lightgrey
+    		border-radius: 3px
+			color: white
+
+body > .container, body > .container-fluid
+		min-height: 25vh
+
+body > footer
+	+mountains-background
+	+background-fixed
+	+select(none)
+	background-position: center bottom
+	padding-top: 1rem
+	h4
+		background-color: rgba(255, 255, 255, 0.1)
+		margin-top: 0.5em
+		padding: 0.2em
+		border-radius: 2px
+	ul
+		+list-triangle($white)
+		width: 200px
+		margin: auto
+	a
+		color: white
+	#copyright > p
+		margin: 0
+		padding: 0.2rem 0
+		+darkgrey-background
