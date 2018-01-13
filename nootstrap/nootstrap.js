@@ -18,6 +18,10 @@ function updateChangeOnTop() {
 		$('.changeOnTop').removeClass("onTop");
 }
 
+function debugToggle() {
+	$('body').toggleClass("nootstrap-debug");
+}
+
 $(document).ready(function() {
 	updateParallax();
 	updateChangeOnTop();
