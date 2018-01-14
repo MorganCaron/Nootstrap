@@ -1,7 +1,7 @@
 # Nootstrap
 Not Bootstrap: Sass Front-End Web Framework
 
-![Demo](https://htmlpreview.github.io/?https://github.com/MorganCaron/Nootstrap/blob/master/example/index.html)
+[Demo](https://htmlpreview.github.io/?https://github.com/MorganCaron/Nootstrap/blob/master/example/index.html)
 
 ![Noot](https://noot.space/noot.gif)
 
@@ -10,7 +10,7 @@ Not Bootstrap: Sass Front-End Web Framework
 ### Sass/SCSS + Javascript
 
 * Import nootstrap.sass file into your Sass/SCSS file
-* Import ![jQuery](https://code.jquery.com/)
+* Import [jQuery](https://code.jquery.com/)
 * Import nootstrap.js file into your HTML `<head>` mark
 
 **HTML:**
@@ -40,7 +40,7 @@ or **SCSS** (style.scss):
 ### CSS + Javascript
 
 * Import nootstrap.min.css file into your HTML `<head>` mark
-* Import ![jQuery](https://code.jquery.com/)
+* Import [jQuery](https://code.jquery.com/)
 * Import nootstrap.js file into your HTML `<head>` mark
 
 **HTML:**
