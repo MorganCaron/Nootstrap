@@ -2,13 +2,14 @@
 <html>
     <head>
         <title>Nootstrap Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style.min.css">
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="../nootstrap/nootstrap.js"></script>
         <script src="https://use.fontawesome.com/9a7d39ce25.js"></script>
     </head>
     <body>
-        <header class="parallax">
+        <header class="container-fluid parallax">
             <div class="parallax-background"></div>
             <div class="parallax-content d-flex">
                 <div class="card card-grey m-auto text-center">
@@ -52,11 +53,33 @@
                 </div>
             </div>
         </div>
+        <div class="parallax">
+            <div class="parallax-background mountains-background"></div>
+        </div>
+        <br>
+        <div class="container parallax">
+            <div class="parallax-background mountains-background"></div>
+            <div class="parallax-content">
+                <p>container parallax</p>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid parallax">
+            <div class="parallax-background mountains-background"></div>
+            <div class="parallax-content">
+                <p>container-fluid parallax</p>
+            </div>
+        </div>
         <div class="container-fluid">
             <h2>Container Fluid Title</h2>
+        </div>
+        <div class="container">
             <div class="row">
                 <div class="col-6">
-
+                    Embed (work in progress)
+                    <div class="embed-16by9">
+                        <iframe src="https://www.youtube-nocookie.com/embed/dKHm_BDJ6Zw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div class="col-6">
 
@@ -64,7 +87,7 @@
             </div>
         </div>
         <div class="container">
-
+            <h2>Carousel <small>Work in Progress</small></h2>
         </div>
         <footer class="container-fluid">
             footer

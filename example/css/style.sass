@@ -4,12 +4,17 @@
 	+transition(all 1s)
 
 body > header
-	min-height: 100vh
+	height: 100vh
 	.parallax-background
 		+mountains-background
 
-body > .container, body > .container-fluid
-		min-height: 25vh
+body > .container:not(.parallax), body > .container-fluid:not(.parallax)
+	height: 25vh
+
+.mountains-background
+	+mountains-background
+	& + .parallax-content
+		color: white
 
 body > footer
 	+mountains-background
