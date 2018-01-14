@@ -3,6 +3,8 @@ Not Bootstrap: Sass Front-End Web Framework
 
 ![Demo](https://htmlpreview.github.io/?https://github.com/MorganCaron/Nootstrap/blob/master/example/index.html)
 
+![Noot](https://noot.space/noot.gif)
+
 ## Installation
 
 ### Sass/SCSS + Javascript
@@ -26,11 +28,11 @@ Not Bootstrap: Sass Front-End Web Framework
 </html>
 ```
 
-Sass (style.sass):
+**Sass** (style.sass):
 ```sass
 @import nootstrap
 ```
-or SCSS (style.scss):
+or **SCSS** (style.scss):
 ```scss
 @import "nootstrap";
 ```
