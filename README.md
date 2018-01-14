@@ -62,6 +62,34 @@ or **SCSS** (style.scss):
 
 ### Navbar
 
+```html
+<nav class="navbar">
+  <a href="#">Navbar Title</a>
+  <ul class="navbar-nav">
+    <li>Element 1</li>
+    <li>Element 2</li>
+    <li>Element 3</li>
+  </ul>
+  <span>Text right</span>
+</nav>
+```
+
 ### Button
 
+```html
+<a href="#" class="btn">Button 1</a>
+<button class="btn">Button 2</button>
+```
+
 ### Parallax
+
+```html
+<div class="parallax">
+  <div class="parallax-background">
+    <!-- background -->
+  </div>
+  <div class="parallax-content">
+    <!-- content -->
+  </div>
+</div>
+```
