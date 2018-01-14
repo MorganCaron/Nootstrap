@@ -80,6 +80,17 @@ or **SCSS** (style.scss):
 <a href="#" class="btn">Button 1</a>
 <button class="btn">Button 2</button>
 ```
+### Card
+
+```html
+<div class="card">
+  <header>Title</header>
+  <div class="card-body">
+    Content
+   </div>
+   <footer>Footer</footer>
+</div>
+```
 
 ### Parallax
 
