@@ -19,7 +19,7 @@ function updateChangeOnTop() {
 }
 
 function debugToggle() {
-	$('body').toggleClass('nootstrap-debug');
+	$('html').toggleClass('nootstrap-debug');
 }
 
 function newNotification(content) {
@@ -32,17 +32,16 @@ function newNotification(content) {
 	}).animate({
 		opacity: 1,
 		marginTop: 0
-	});
-	setTimeout(function() {
-		$('body > .nootstrap-notifications > .nootstrap-notification:first-child').animate({
+	}, 300, function() {
+		$(this).delay(5000).animate({
 			opacity: 0,
 			marginTop: '-=100%'
 		}, 300, function() {
 			$(this).remove();
+			if ($('body > .nootstrap-notifications > .nootstrap-notification').length == 0)
+				$('body > .nootstrap-notifications').remove();
 		});
-		if ($('body > .nootstrap-notifications > .nootstrap-notification').length == 0)
-			$('body > .nootstrap-notifications').remove();
-	}, 5000);
+	});
 }
 
 $(document).ready(function() {

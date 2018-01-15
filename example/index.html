@@ -3,12 +3,23 @@
     <head>
         <title>Nootstrap Example</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="css/style.min.css">
+        <!-- JS -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="../nootstrap/nootstrap.js"></script>
         <script src="https://use.fontawesome.com/9a7d39ce25.js"></script>
     </head>
     <body>
+        <nav class="navbar fixed-top">
+            <a href="#">Navbar Title</a>
+            <ul class="navbar-nav">
+                <li>Element 1</li>
+                <li>Element 2</li>
+                <li>Element 3</li>
+            </ul>
+            Work in progress
+        </nav>
         <header class="container-fluid">
             <div class="parallax">
                 <div class="parallax-background"></div>
@@ -29,21 +40,13 @@
                 </div>
             </div>
         </header>
-        <nav class="navbar fixed-top">
-            <a href="#">Navbar Title</a>
-            <ul class="navbar-nav">
-                <li>Element 1</li>
-                <li>Element 2</li>
-                <li>Element 3</li>
-            </ul>
-            Work in progress
-        </nav>
+        <br>
         <div class="container">
-            <h2>Container Title</h2>
+            <h2>Container example</h2>
             <div class="row">
                 <div class="col-6">
                     <div class="card">
-                        <header><h3>Title</h3></header>
+                        <header><h3>Grid example</h3></header>
                         <div class="card-body">
                             Work in Progress
                         </div>
@@ -51,13 +54,17 @@
                     </div>
                 </div>
                 <div class="col-6">
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="col-6">
+                    <h2>Notification example</h2>
+                    <button type="button" class="btn" onclick="newNotification('test');">Notification</button>
+                </div>
+                <div class="col-6">
+                    <h2>Debug example</h2>
                     <button class="btn" onclick="debugToggle();">Debug Mode</button>
-                    <button type="button" class="btn" onclick="newNotification('test');">Notification (work in progress)</button>
                 </div>
             </div>
-        </div>
-        <div class="parallax">
-            <div class="parallax-background mountains-background"></div>
         </div>
         <br>
         <div class="container">
@@ -73,12 +80,13 @@
             <div class="parallax">
                 <div class="parallax-background mountains-background"></div>
                 <div class="parallax-content">
-                    <p>.container-fluid > .parallax</p>
+                    <div class="container">
+                        <p>.container-fluid > .parallax</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid perspective">
-            <h2>3D Container-fluid</h2>
+        <div class="container-fluid perspective elements3d">
             <br>
             <div class="row">
                 <div class="col-2">
@@ -103,9 +111,10 @@
             <br>
         </div>
         <div class="container">
+            <h2>Embed example</h2>
             <div class="row">
                 <div class="col-6">
-                    Embed (work in progress)
+                    work in progress
                     <div class="embed-16by9">
                         <iframe src="https://www.youtube-nocookie.com/embed/dKHm_BDJ6Zw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
