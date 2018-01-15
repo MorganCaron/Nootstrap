@@ -2,7 +2,22 @@ body
 	+select(none)
 
 .container, .container-fluid
-    +select(text)
+	+select(text)
+	padding-left: 10px
+	padding-right: 10px
+	.row
+		display: flex
+		flex-direction: row
+	    flex-wrap: wrap
+		margin-left: -10px
+		margin-right: -10px
+		@for $width from 1 through 12
+			.col-#{$width}
+				-ms-flex-basis: ($width / 12) * 100%
+				flex-basis: ($width / 12) * 100%
+				max-width: ($width / 12) * 100%
+				padding-left: 10px
+				padding-right: 10px
 
 .container
 	width: 100%
@@ -21,15 +36,3 @@ body
 @media (min-width: 1200px)
 	.container
 	    max-width: 1140px
-
-.row
-	display: flex
-	flex-direction: row
-    flex-wrap: wrap
-	@for $width from 1 through 12
-		.col-#{$width}
-			-ms-flex-basis: ($width / 12) * 100%
-			flex-basis: ($width / 12) * 100%
-			max-width: ($width / 12) * 100%
-			padding-left: 10px
-			padding-right: 10px

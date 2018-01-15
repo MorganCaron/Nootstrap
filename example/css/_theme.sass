@@ -22,12 +22,6 @@ body
 .container, .container-fluid
 	+select(text)
 
-.card
-	border-radius: 3px
-.card-grey
-	background-color: $alpha-lightgrey
-	color: white
-
 .scroll-arrow
 	width: 40px
 	height: 40px
@@ -38,6 +32,19 @@ body
 	background-image: url("../img/assets/arrow.png")
 	background-position: 0 0
 	+scrollArrow(3s)
+
+.card
+	border-radius: 3px
+.card-grey
+	background-color: $alpha-lightgrey
+	color: white
+
+.nootstrap-notification
+	margin-bottom: 1rem
+	padding: 0.5rem
+	background-color: white
+	box-shadow: 2px 5px 2px 1px rgba(0, 0, 0, 0.2)
+	font-size: 1rem
 
 a
 	color: $blue
