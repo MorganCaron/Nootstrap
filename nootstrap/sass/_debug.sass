@@ -1,10 +1,24 @@
 .nootstrap-debug
+	+transition(all 0.3s ease-in-out)
 	.container, .container-fluid
 		background-color: rgba(orange, 0.2)
 		border: 1px solid rgba(orange, 0.25)
+		+transition(all 0.3s ease-in-out)
+		&:hover
+			+transition(all 0.3s ease-in-out)
+			+perspective(250px)
+			+transform(rotate3d(1, 1, 0, 30deg) scale3d(0.7, 0.7, 0.7))
+			.row, [class*="col-"]
+				+transition(all 0.3s ease-in-out)
+				+transform(translateZ(2rem) scale3d(0.7, 0.7, 0.7))
 	.row
 		background-color: rgba(lime, 0.2)
 		border: 1px solid rgba(lime, 0.25)
 	[class*="col-"]
 		background-color: rgba(blue, 0.2)
 		border: 1px solid rgba(blue, 0.25)
+	.perspective
+		+transition(all 0.3s ease-in-out)
+	.perspective:hover
+		+perspective(250px)
+		+transform(rotate3d(1, 1, 0, 30deg) scale3d(0.7, 0.7, 0.7))
