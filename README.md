@@ -1,7 +1,7 @@
 # Nootstrap
 Not Bootstrap: Sass Front-End Web Framework
 
-[Demo](https://htmlpreview.github.io/?https://github.com/MorganCaron/Nootstrap/blob/master/example/index.html)
+[Demo](https://morgancaron.github.io/Nootstrap/example/)
 
 ![Noot](https://noot.space/noot.gif)
 
