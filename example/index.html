@@ -3,6 +3,7 @@
     <head>
         <title>Nootstrap Example</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="css/style.min.css">
         <link rel="stylesheet" type="text/css" href="../nootstrap/nootstrap-debug.min.css">
@@ -32,9 +33,11 @@
                             <a href="https://github.com/MorganCaron/Nootstrap" class="btn btn-outline" title="Download Nootstrap">Download <i class="fa fa-cloud-download" aria-hidden="true"></i></a>
                             <br>
                             <small>
-                                Framework gratuit et libre<br>
-                                Mises à jour fréquentes.
+                                Free and open-source Framework<br>
+                                Frequently updated.
                             </small>
+                            <hr>
+                            <p>Scroll down for examples</p>
                         </div>
                     </div>
                     <div class="scroll-arrow"></div>
@@ -43,11 +46,11 @@
         </header>
         <br>
         <div class="container">
-            <h2>Container example</h2>
+            <h2>Container</h2>
             <div class="row">
                 <div class="col-6">
                     <div class="card">
-                        <header><h3>Grid example</h3></header>
+                        <header><h3>Grid</h3></header>
                         <div class="card-body">
                             Work in Progress
                         </div>
@@ -58,21 +61,29 @@
                     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <div class="col-4">
-                    <h2>Notification example</h2>
+                    <h2>Notification</h2>
                     <button type="button" class="btn" onclick="newNotification('test');">Notification</button>
                 </div>
                 <div class="col-4">
-                    <h2>Debug example</h2>
+                    <h2>Debug</h2>
                     <button class="btn" onclick="toggleDebug();">Debug Mode</button>
                 </div>
                 <div class="col-4">
-                    <h2>Activable example</h2>
+                    <h2>Activable</h2>
+                    <h3>Toggle</h3>
                     <button class="btn toggleActive" activable="activable-1">Demo</button>
                     <p id="activable-1">Look at me</p>
-                    <h2>Fullscreen example</h2>
+                    <h3>Add/Remove</h3>
                     <button class="btn addActive" activable="activable-2">Demo</button>
-                    <div id="activable-2" class="removeActive" activable="activable-2">
-                        Click on me to reduce this page
+                    <div id="activable-2">
+                        <div class="container">
+                            <div class="col">
+                                <p class="removeActive" activable="activable-2">Click me to close fullscreen</p>
+                            </div>
+                            <div class="col">
+                                <h6>instead of text, you could use buttons, images, ...</h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -122,7 +133,7 @@
             <br>
         </div>
         <div class="container">
-            <h2>Embed example</h2>
+            <h2>Embed</h2>
             <div class="row">
                 <div class="col-6">
                     work in progress

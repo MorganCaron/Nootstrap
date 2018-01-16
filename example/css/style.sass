@@ -18,17 +18,20 @@ body > header > .parallax
 	font-size: 1rem
 
 #activable-2
-	+transition(all 0.5s)
+	+transition(font-size 0.5s)
 	background-color: teal
-	color: teal
+	color: white
+	height: 0
+	visibility: hidden
 	&.active
+		height: auto
+		visibility: visible
 		position: fixed
 		top: 0
 		bottom: 0
 		left: 0
 		right: 0
 		z-index: 1000
-		color: white
 		font-size: 3rem
 
 .elements3d .parallax
