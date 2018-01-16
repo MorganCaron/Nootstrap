@@ -12,6 +12,8 @@ body
 		align-content: flex-start
 		margin-left: -10px
 		margin-right: -10px
+		.col
+			display: inline-flex
 		@for $width from 1 through 12
 			.col-#{$width}
 				-ms-flex-basis: ($width / 12) * 100%

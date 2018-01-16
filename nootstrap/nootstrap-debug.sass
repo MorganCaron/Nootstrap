@@ -6,7 +6,7 @@
 			-webkit-transition: transform 0.2s ease-in-out
 			transition: transform 0.2s ease-in-out
 		&:hover
-			&::before, .row::before, [class*="col-"]::before
+			&::before, .row::before, .col::before, [class*="col-"]::before
 				display: block
 				position: absolute
 				background-color: white
@@ -22,6 +22,8 @@
 				content: ".container-fluid"
 			.row::before
 				content: ".row"
+			.col::before
+				content: ".col"
 			@for $size from 1 through 12
 				.col-#{$size}::before
 					content: ".col-#{$size}"
