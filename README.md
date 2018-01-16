@@ -58,6 +58,24 @@ or **SCSS** (style.scss):
 </html>
 ```
 
+## Debug
+
+* Import nootstrap-debug.min.css after importing nootstrap CSS
+
+**HTML:**
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/nootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/nootstrap-debug.min.css">
+  </head>
+  <body>
+    ...
+  </body>
+</html>
+```
+
 ## Usage
 
 
