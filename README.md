@@ -60,6 +60,16 @@ or **SCSS** (style.scss):
 
 ## Usage
 
+
+### Activable
+
+```html
+<button class="btn toggleActive" activable="activable-1">Toggle .active class</button>
+<button class="btn addActive" activable="activable-1">Add .active class</button>
+<button class="btn removeActive" activable="activable-1">Remove .active class</button>
+<p id="activable-1">Activable element</p>
+```
+
 ### Button
 
 ```html
@@ -95,6 +105,12 @@ or **SCSS** (style.scss):
 </div>
 ```
 
+### Debug
+
+```javascript
+toggleDebug();
+```
+
 ### Grid
 
 ```html
@@ -122,6 +138,13 @@ or **SCSS** (style.scss):
   </ul>
   <span>Text right</span>
 </nav>
+```
+
+### Notification
+
+```javascript
+newNotification('text');
+newNotification('<h1>text</h1>');
 ```
 
 ### Parallax
