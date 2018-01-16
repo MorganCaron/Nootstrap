@@ -60,6 +60,56 @@ or **SCSS** (style.scss):
 
 ## Usage
 
+### Button
+
+```html
+<a href="#" class="btn">Button 1</a>
+<button class="btn">Button 2</button>
+```
+
+### Card
+
+```html
+<div class="card">
+  <header>Title</header>
+  <div class="card-body">
+    Content
+   </div>
+   <footer>Footer</footer>
+</div>
+```
+
+### Container
+
+```html
+<div class="container">
+  Content
+</div>
+```
+
+### Container Fluid
+
+```html
+<div class="container-fluid">
+  Content
+</div>
+```
+
+### Grid
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      Col 1
+    </div>
+    <div class="col-6">
+      Col 2
+    </div>
+  </div>
+</div>
+```
+
 ### Navbar
 
 ```html
@@ -72,24 +122,6 @@ or **SCSS** (style.scss):
   </ul>
   <span>Text right</span>
 </nav>
-```
-
-### Button
-
-```html
-<a href="#" class="btn">Button 1</a>
-<button class="btn">Button 2</button>
-```
-### Card
-
-```html
-<div class="card">
-  <header>Title</header>
-  <div class="card-body">
-    Content
-   </div>
-   <footer>Footer</footer>
-</div>
 ```
 
 ### Parallax
