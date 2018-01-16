@@ -58,7 +58,7 @@ or **SCSS** (style.scss):
 </html>
 ```
 
-## Debug
+### Debug
 
 * Import nootstrap-debug.min.css after importing nootstrap CSS
 
