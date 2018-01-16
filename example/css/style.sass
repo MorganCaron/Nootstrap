@@ -13,6 +13,23 @@ body > header > .parallax
 	& + .parallax-content
 		color: white
 
+#activable-1.active
+	color: blue
+
+#activable-2
+	+transition(all 0.5s)
+	background-color: teal
+	color: teal
+	&.active
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 1000
+		color: white
+		font-size: 3rem
+
 .elements3d .parallax
 	min-height: 10rem
 	box-shadow: 3px 3px 8px 1px rgba(0,0,0,0.2)

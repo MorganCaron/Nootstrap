@@ -18,7 +18,7 @@ function updateChangeOnTop() {
 		$('.changeOnTop').removeClass('onTop');
 }
 
-function debugToggle() {
+function toggleDebug() {
 	$('html').toggleClass('nootstrap-debug');
 }
 
@@ -47,6 +47,16 @@ function newNotification(content) {
 $(document).ready(function() {
 	updateParallax();
 	updateChangeOnTop();
+
+	$('.addActive').click(function() {
+		$('#' + $(this).attr('activable')).addClass('active');
+	});
+	$('.removeActive').click(function() {
+		$('#' + $(this).attr('activable')).removeClass('active');
+	});
+	$('.toggleActive').click(function() {
+		$('#' + $(this).attr('activable')).toggleClass('active');
+	});
 });
 
 $(window).scroll(function() {

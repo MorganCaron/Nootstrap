@@ -56,13 +56,23 @@
                 <div class="col-6">
                     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
-                <div class="col-6">
+                <div class="col-4">
                     <h2>Notification example</h2>
                     <button type="button" class="btn" onclick="newNotification('test');">Notification</button>
                 </div>
-                <div class="col-6">
+                <div class="col-4">
                     <h2>Debug example</h2>
-                    <button class="btn" onclick="debugToggle();">Debug Mode</button>
+                    <button class="btn" onclick="toggleDebug();">Debug Mode</button>
+                </div>
+                <div class="col-4">
+                    <h2>Activable example</h2>
+                    <button class="btn toggleActive" activable="activable-1">Demo</button>
+                    <p id="activable-1">disabled</p>
+                    <h2>Fullscreen example</h2>
+                    <button class="btn addActive" activable="activable-2">Demo</button>
+                    <div id="activable-2" class="removeActive" activable="activable-2">
+                        Click on me to reduce this page
+                    </div>
                 </div>
             </div>
         </div>
