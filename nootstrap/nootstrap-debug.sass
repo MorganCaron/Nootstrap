@@ -11,7 +11,10 @@
 				position: absolute
 				background-color: white
 				border: 1px solid black
+				padding-left: 0.25rem
+				padding-right: 0.25rem
 				color: black
+				font-size: 1rem
 				z-index: 1000
 			&.container::before
 				content: ".container"
@@ -19,8 +22,9 @@
 				content: ".container-fluid"
 			.row::before
 				content: ".row"
-			[class*="col-"]::before
-				content: ".col-"
+			@for $size from 1 through 12
+				.col-#{$size}::before
+					content: ".col-#{$size}"
 			[class*="col-"]
 				-webkit-transform: scale3d(0.85, 0.85, 0.85)
 				transform: scale3d(0.85, 0.85, 0.85)
