@@ -63,8 +63,6 @@
                 <div class="col-4">
                     <h2>Notification</h2>
                     <button type="button" class="btn" onclick="newNotification('test');">Notification</button>
-                </div>
-                <div class="col-4">
                     <h2>Debug</h2>
                     <button class="btn" onclick="toggleDebug();">Debug Mode</button>
                 </div>
@@ -85,6 +83,19 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-4">
+                    <h2>Next/Previous/Goto</h2>
+                    <button class="btn prevActive" activable="activable-3">Previous</button>
+                    <button class="btn nextActive" activable="activable-3">Next</button>
+                    <button class="btn gotoActive" activable="activable-3" activable-goto="0">1</button>
+                    <button class="btn gotoActive" activable="activable-3" activable-goto="1">2</button>
+                    <button class="btn gotoActive" activable="activable-3" activable-goto="2">3</button>
+                    <ul id="activable-3">
+                        <li class="active">Element 1</li>
+                        <li>Element 2</li>
+                        <li>Element 3</li>
+                    </ul>
                 </div>
             </div>
         </div>
