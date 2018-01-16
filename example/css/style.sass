@@ -38,6 +38,17 @@ body > header > .parallax
 	.active
 		background-color: orange
 
+#carousel-list
+	width: auto
+	height: auto
+	li
+		+transition(opacity 0.5s)
+		max-width: 400px
+		height: auto
+		opacity: 0
+		&.active
+			opacity: 1
+
 .elements3d .parallax
 	min-height: 10rem
 	box-shadow: 3px 3px 8px 1px rgba(0,0,0,0.2)

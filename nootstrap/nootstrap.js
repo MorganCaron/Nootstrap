@@ -49,17 +49,17 @@ $(document).ready(function() {
 	updateChangeOnTop();
 
 	$('.addActive').click(function() {
-		$('#' + $(this).attr('activable')).addClass('active');
+		$('#' + $(this).attr('target')).addClass('active');
 	});
 	$('.removeActive').click(function() {
-		$('#' + $(this).attr('activable')).removeClass('active');
+		$('#' + $(this).attr('target')).removeClass('active');
 	});
 	$('.toggleActive').click(function() {
-		$('#' + $(this).attr('activable')).toggleClass('active');
+		$('#' + $(this).attr('target')).toggleClass('active');
 	});
 	$('.nextActive').click(function() {
-		var activable = $('#' + $(this).attr('activable'));
-		var current = activable.find('> .active');
+		var target = $('#' + $(this).attr('target'));
+		var current = target.find('> .active');
 		var next = current.next();
 		if (next.length > 0) {
 			current.removeClass('active');
@@ -67,8 +67,8 @@ $(document).ready(function() {
 		}
 	});
 	$('.prevActive').click(function() {
-		var activable = $('#' + $(this).attr('activable'));
-		var current = activable.find('> .active');
+		var target = $('#' + $(this).attr('target'));
+		var current = target.find('> .active');
 		var prev = current.prev();
 		if (prev.length > 0) {
 			current.removeClass('active');
@@ -76,10 +76,10 @@ $(document).ready(function() {
 		}
 	});
 	$('.gotoActive').click(function() {
-		var activable = $('#' + $(this).attr('activable'));
-		var goto = parseInt($(this).attr('activable-goto'));
-		activable.find('> .active').removeClass('active');
-		activable.find('> *').eq(goto).addClass('active');
+		var target = $('#' + $(this).attr('target'));
+		var goto = parseInt($(this).attr('target-goto'));
+		target.find('> .active').removeClass('active');
+		target.find('> *').eq(goto).addClass('active');
 	});
 });
 
