@@ -3,6 +3,9 @@
 .changeOnTop
 	+transition(all 1s)
 
+.navbar button
+	margin: 0.5rem
+
 body > header > .parallax
 	height: 100vh
 	.parallax-background
@@ -33,6 +36,8 @@ body > header > .parallax
 		right: 0
 		z-index: 1000
 		font-size: 3rem
+		::root
+			overflow: hidden
 
 #activable-3
 	.active
@@ -42,12 +47,20 @@ body > header > .parallax
 	width: auto
 	height: auto
 	list-style: none
+	margin: 0
 	padding-left: 0
 	li
-		+transition(opacity 0.5s)
-		opacity: 0
+		display: none
+		line-height: 0
 		&.active
-			opacity: 1
+			display: block
+#carousel-control
+	ul
+		list-style: none
+		margin: 0
+		padding-left: 0
+		button
+			width: 100%
 
 .elements3d .parallax
 	min-height: 10rem

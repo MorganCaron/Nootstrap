@@ -182,18 +182,30 @@
                             <img src="img/background/mountains3.jpg" alt="Mountains">
                         </li>
                     </ul>
+                    <nav class="navbar">
+                        <button class="btn nootPrev" noot-target="carousel-list">Previous</button>
+                        <ul class="navbar-nav">
+                            <li><button class="btn nootGoto" noot-target="carousel-list" noot-goto="0">1</button></li>
+                            <li><button class="btn nootGoto" noot-target="carousel-list" noot-goto="1">2</button></li>
+                            <li><button class="btn nootGoto" noot-target="carousel-list" noot-goto="2">3</button></li>
+                        </ul>
+                        <button class="btn nootNext" noot-target="carousel-list">Next</button>
+                    </nav>
                 </div>
                 <div class="col-4">
                     <div id="carousel-control">
+                        <ul>
+                            <li><button class="btn nootGoto" noot-target="carousel-list" noot-goto="0">1</button></li>
+                            <li><button class="btn nootGoto" noot-target="carousel-list" noot-goto="1">2</button></li>
+                            <li><button class="btn nootGoto" noot-target="carousel-list" noot-goto="2">3</button></li>
+                        </ul>
                         <button class="btn nootPrev" noot-target="carousel-list">Previous</button>
                         <button class="btn nootNext" noot-target="carousel-list">Next</button>
-                        <button class="btn nootGoto" noot-target="carousel-list" noot-goto="0">1</button>
-                        <button class="btn nootGoto" noot-target="carousel-list" noot-goto="1">2</button>
-                        <button class="btn nootGoto" noot-target="carousel-list" noot-goto="2">3</button>
                     </div>
                 </div>
             </div>
         </div>
+        <br>
         <footer class="container-fluid">
             <div class="container">
                 <div class="row">
