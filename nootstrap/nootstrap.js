@@ -26,21 +26,10 @@ function newNotification(content) {
 	if ($('body > .nootstrap-notifications').length == 0)
 		$('body').append('<div class="nootstrap-notifications"></div>');
 	$('body > .nootstrap-notifications').append('<div class="nootstrap-notification"></div>');
-	$('body > .nootstrap-notifications > .nootstrap-notification:last-child').html(content).css({
-		opacity: 0,
-		marginTop: '+=100%'
-	}).animate({
-		opacity: 1,
-		marginTop: 0
-	}, 300, function() {
-		$(this).delay(5000).animate({
-			opacity: 0,
-			marginTop: '-=100%'
-		}, 300, function() {
-			$(this).remove();
-			if ($('body > .nootstrap-notifications > .nootstrap-notification').length == 0)
-				$('body > .nootstrap-notifications').remove();
-		});
+	$('body > .nootstrap-notifications > .nootstrap-notification:last-child').html(content).delay(5000).queue(function() {
+		$(this).remove();
+		if ($('body > .nootstrap-notifications > .nootstrap-notification').length == 0)
+			$('body > .nootstrap-notifications').remove();
 	});
 }
 
@@ -48,38 +37,47 @@ $(document).ready(function() {
 	updateParallax();
 	updateChangeOnTop();
 
-	$('.addActive').click(function() {
-		$('#' + $(this).attr('target')).addClass('active');
+	$('.nootAdd').click(function() {
+		$('#' + $(this).attr('noot-target')).addClass('active');
 	});
-	$('.removeActive').click(function() {
-		$('#' + $(this).attr('target')).removeClass('active');
+	$('.nootRemove').click(function() {
+		$('#' + $(this).attr('noot-target')).removeClass('active');
 	});
-	$('.toggleActive').click(function() {
-		$('#' + $(this).attr('target')).toggleClass('active');
+	$('.nootToggle').click(function() {
+		$('#' + $(this).attr('noot-target')).toggleClass('active');
 	});
-	$('.nextActive').click(function() {
-		var target = $('#' + $(this).attr('target'));
-		var current = target.find('> .active');
+	$('.nootNext').click(function() {
+		var target = $('#' + $(this).attr('noot-target'));
+		var attribute = $(this).attr('noot-class');
+		if (attribute == undefined)
+			attribute = 'active';
+		var current = target.find('> .' + attribute);
 		var next = current.next();
 		if (next.length > 0) {
-			current.removeClass('active');
-			next.addClass('active');
+			current.removeClass(attribute);
+			next.addClass(attribute);
 		}
 	});
-	$('.prevActive').click(function() {
-		var target = $('#' + $(this).attr('target'));
-		var current = target.find('> .active');
+	$('.nootPrev').click(function() {
+		var target = $('#' + $(this).attr('noot-target'));
+		var attribute = $(this).attr('noot-class');
+		if (attribute == undefined)
+			attribute = 'active';
+		var current = target.find('> .' + attribute);
 		var prev = current.prev();
 		if (prev.length > 0) {
-			current.removeClass('active');
-			prev.addClass('active');
+			current.removeClass(attribute);
+			prev.addClass(attribute);
 		}
 	});
-	$('.gotoActive').click(function() {
-		var target = $('#' + $(this).attr('target'));
-		var goto = parseInt($(this).attr('target-goto'));
-		target.find('> .active').removeClass('active');
-		target.find('> *').eq(goto).addClass('active');
+	$('.nootGoto').click(function() {
+		var target = $('#' + $(this).attr('noot-target'));
+		var attribute = $(this).attr('noot-class');
+		if (attribute == undefined)
+			attribute = 'active';
+		var goto = parseInt($(this).attr('noot-goto'));
+		target.find('> .' + attribute).removeClass(attribute);
+		target.find('> *').eq(goto).addClass(attribute);
 	});
 });
 

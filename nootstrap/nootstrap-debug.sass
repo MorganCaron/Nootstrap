@@ -1,37 +1,41 @@
+=showMarkName($name)
+	&::before
+		display: block
+		content: $name
+		position: absolute
+		background-color: white
+		border: 1px solid black
+		padding-left: 0.25rem
+		padding-right: 0.25rem
+		color: black
+		font-size: 1rem
+		z-index: 1000
+
 .nootstrap-debug
 	.container, .container-fluid
 		background-color: rgba(orange, 0.2)
 		border: 1px solid rgba(orange, 0.25)
-		[class*="col-"]
-			-webkit-transition: transform 0.2s ease-in-out
-			transition: transform 0.2s ease-in-out
 		&:hover
-			&::before, .row::before, .col::before, [class*="col-"]::before
-				display: block
-				position: absolute
-				background-color: white
-				border: 1px solid black
-				padding-left: 0.25rem
-				padding-right: 0.25rem
-				color: black
-				font-size: 1rem
-				z-index: 1000
-			&.container::before
-				content: ".container"
-			&.container-fluid::before
-				content: ".container-fluid"
-			.row::before
-				content: ".row"
-			.col::before
-				content: ".col"
-			@for $size from 1 through 12
-				.col-#{$size}::before
-					content: ".col-#{$size}"
-			[class*="col-"]
-				-webkit-transform: scale3d(0.85, 0.85, 0.85)
-				transform: scale3d(0.85, 0.85, 0.85)
+			&.container
+				+showMarkName(".container")
+			&.container-fluid
+				+showMarkName(".container-fluid")
+		.row
+			&:hover
+				+showMarkName(".row")
+				.col
+					+showMarkName(".col")
+				@for $size from 1 through 12
+					.col-#{$size}
+						+showMarkName(".col-#{$size}")
+				.col, [class*="col-"]
+					-webkit-transform: scale3d(0.9, 0.9, 0.9)
+					transform: scale3d(0.9, 0.9, 0.9)
+			.col, [class*="col-"]
+				-webkit-transition: transform 0.2s ease-in-out
+				transition: transform 0.2s ease-in-out
 	.row
-		background: repeating-linear-gradient(to right, rgba(lime, 0.2), rgba(lime, 0.2) calc(99%/12), rgba(black, 0.2) calc(99%/12), rgba(black, 0.2) calc(100%/12))
+		background: repeating-linear-gradient(to right, #C1E598, #C1E598 calc(98%/12), rgba(black, 0.2) calc(98%/12), rgba(black, 0.2) calc(100%/12))
 		border: 1px solid rgba(lime, 0.25)
 	[class*="col-"]
 		background-color: rgba(blue, 0.2)

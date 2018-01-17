@@ -39,12 +39,27 @@ body
 	background-color: $alpha-lightgrey
 	color: white
 
+@keyframes notificationAnimation
+	0%
+		margin-top: 3rem
+		opacity: 0
+	5%
+		margin-top: 0
+		opacity: 1
+	95%
+		margin-top: 0
+		opacity: 1
+	100%
+		margin-top: -3rem
+		opacity: 0
 .nootstrap-notification
 	margin-bottom: 1rem
 	padding: 0.5rem
 	background-color: white
 	box-shadow: 2px 5px 2px 1px rgba(0, 0, 0, 0.2)
 	font-size: 1rem
+	opacity: 0
+	animation: notificationAnimation 5s ease-in-out
 
 a
 	color: $blue

@@ -7,6 +7,7 @@ Not Bootstrap: Sass Front-End Web Framework
 
 ## Installation
 
+
 ### Sass/SCSS + Javascript
 
 * Import nootstrap.sass file into your Sass/SCSS file
@@ -79,14 +80,15 @@ or **SCSS** (style.scss):
 ## Usage
 
 
-### Activable
+### Toggle Class
 
 ```html
-<button class="btn toggleActive" activable="activable-1">Toggle .active class</button>
-<button class="btn addActive" activable="activable-1">Add .active class</button>
-<button class="btn removeActive" activable="activable-1">Remove .active class</button>
-<p id="activable-1">Activable element</p>
+<button class="btn nootToggle" noot-target="target-1" noot-class="active">Toggle .active class</button>
+<button class="btn nootAdd" noot-target="target-1" noot-class="active">Add .active class</button>
+<button class="btn nootRemove" noot-target="target-1" noot-class="active">Remove .active class</button>
+<p id="target-1">Activable element</p>
 ```
+Attribute noot-class is optional. Default value: "active"
 
 ### Button
 

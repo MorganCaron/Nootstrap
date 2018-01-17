@@ -11,6 +11,7 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="../nootstrap/nootstrap.js"></script>
         <script src="https://use.fontawesome.com/9a7d39ce25.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
     </head>
     <body>
         <nav class="navbar fixed-top">
@@ -60,42 +61,51 @@
                 <div class="col-6">
                     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
+            </div>
+            <br>
+            <div class="row">
                 <div class="col-4">
                     <h2>Notification</h2>
-                    <button type="button" class="btn" onclick="newNotification('test');">Notification</button>
+                    <button id="notificationButton" type="button" class="btn">Notification</button>
                     <h2>Debug</h2>
-                    <button class="btn" onclick="toggleDebug();">Debug Mode</button>
+                    <button id="debugButton" class="btn">Debug Mode</button>
                 </div>
-                <div class="col-4">
+                <div class="col-8">
                     <h2>Activable</h2>
-                    <h3>Toggle</h3>
-                    <button class="btn toggleActive" target="activable-1">Demo</button>
-                    <p id="activable-1">Look at me</p>
-                    <h3>Add/Remove</h3>
-                    <button class="btn addActive" target="activable-2">Demo</button>
-                    <div id="activable-2">
-                        <div class="container">
-                            <div class="col">
-                                <p class="removeActive" target="activable-2">Click me to close fullscreen</p>
-                            </div>
-                            <div class="col">
-                                <h6>instead of text, you could use buttons, images, ...</h6>
+                    <hr>
+                    <div class="row">
+                        <div class="col-6">
+                            <h3>Toggle</h3>
+                            <button class="btn nootToggle" noot-target="activable-1">Demo</button>
+                            <p id="activable-1">Look at me</p>
+                            <h3>Add/Remove</h3>
+                            <button class="btn nootAdd" noot-target="activable-2">Demo</button>
+                            <div id="activable-2">
+                                <div class="container">
+                                    <div class="col">
+                                        <p class="nootRemove" noot-target="activable-2">Click me to close fullscreen</p>
+                                    </div>
+                                    <div class="col">
+                                        <h6>instead of text, you could use buttons, images, ...</h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="col-6">
+                            <h3>Next/Previous</h3>
+                            <button class="btn nootPrev" noot-target="activable-3">Previous</button>
+                            <button class="btn nootNext" noot-target="activable-3">Next</button>
+                            <h3>Goto</h3>
+                            <button class="btn nootGoto" noot-target="activable-3" noot-goto="0">1</button>
+                            <button class="btn nootGoto" noot-target="activable-3" noot-goto="1">2</button>
+                            <button class="btn nootGoto" noot-target="activable-3" noot-goto="2">3</button>
+                            <ul id="activable-3">
+                                <li class="active">Element 1</li>
+                                <li>Element 2</li>
+                                <li>Element 3</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <h2>Next/Previous/Goto</h2>
-                    <button class="btn prevActive" target="activable-3">Previous</button>
-                    <button class="btn nextActive" target="activable-3">Next</button>
-                    <button class="btn gotoActive" target="activable-3" target-goto="0">1</button>
-                    <button class="btn gotoActive" target="activable-3" target-goto="1">2</button>
-                    <button class="btn gotoActive" target="activable-3" target-goto="2">3</button>
-                    <ul id="activable-3">
-                        <li class="active">Element 1</li>
-                        <li>Element 2</li>
-                        <li>Element 3</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -159,24 +169,28 @@
         </div>
         <div class="container">
             <h2>Carousel <small>work in progress</small></h2>
-            <div class="carousel">
-                <ul id="carousel-list">
-                    <li class="active">
-                        <img src="img/background/mountains1.jpg" alt="Mountains">
-                    </li>
-                    <li>
-                        <img src="img/background/mountains2.jpg" alt="Mountains">
-                    </li>
-                    <li>
-                        <img src="img/background/mountains3.jpg" alt="Mountains">
-                    </li>
-                </ul>
-                <div id="carousel-control">
-                    <button class="btn prevActive" target="carousel-list">Previous</button>
-                    <button class="btn nextActive" target="carousel-list">Next</button>
-                    <button class="btn gotoActive" target="carousel-list" target-goto="0">1</button>
-                    <button class="btn gotoActive" target="carousel-list" target-goto="1">2</button>
-                    <button class="btn gotoActive" target="carousel-list" target-goto="2">3</button>
+            <div class="row">
+                <div class="col-8">
+                    <ul id="carousel-list">
+                        <li class="active">
+                            <img src="img/background/mountains1.jpg" alt="Mountains">
+                        </li>
+                        <li>
+                            <img src="img/background/mountains2.jpg" alt="Mountains">
+                        </li>
+                        <li>
+                            <img src="img/background/mountains3.jpg" alt="Mountains">
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <div id="carousel-control">
+                        <button class="btn nootPrev" noot-target="carousel-list">Previous</button>
+                        <button class="btn nootNext" noot-target="carousel-list">Next</button>
+                        <button class="btn nootGoto" noot-target="carousel-list" noot-goto="0">1</button>
+                        <button class="btn nootGoto" noot-target="carousel-list" noot-goto="1">2</button>
+                        <button class="btn nootGoto" noot-target="carousel-list" noot-goto="2">3</button>
+                    </div>
                 </div>
             </div>
         </div>
