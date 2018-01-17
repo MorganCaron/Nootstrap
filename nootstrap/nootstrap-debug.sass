@@ -22,7 +22,8 @@
 				+showMarkName(".container-fluid")
 		.row
 			&:hover
-				+showMarkName(".row")
+				&, .row
+					+showMarkName(".row")
 				.col
 					+showMarkName(".col")
 				@for $size from 1 through 12
