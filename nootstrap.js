@@ -41,7 +41,9 @@ $(document).ready(function() {
 
 	$('.' + prefix + 'Delete').click(function() {
 		var targets = $('.' + $(this).attr(prefix + '-target'));
-		targets.remove();
+		targets.each(function() {
+			$(this).remove();
+		});
 	});
 
 	$('.' + prefix + 'Add').click(function() {
@@ -50,23 +52,29 @@ $(document).ready(function() {
 		if (attribute == undefined)
 			attribute = 'active';
 		var duration = $(this).attr(prefix + '-duration');
-		targets.addClass(attribute);
+		targets.stop().addClass(attribute);
 		if (duration != undefined)
-			targets.delay(parseInt(duration)).removeClass(attribute);
+			targets.delay(parseInt(duration)).queue(function() {
+				$(this).removeClass(attribute).dequeue();
+			});
 	});
 	$('.' + prefix + 'Remove').click(function() {
 		var targets = $('.' + $(this).attr(prefix + '-target'));
 		var attribute = $(this).attr(prefix + '-class');
 		if (attribute == undefined)
 			attribute = 'active';
-		targets.removeClass(attribute);
+		targets.each(function() {
+			$(this).removeClass(attribute);
+		});
 	});
 	$('.' + prefix + 'Toggle').click(function() {
 		var targets = $('.' + $(this).attr(prefix + '-target'));
 		var attribute = $(this).attr(prefix + '-class');
 		if (attribute == undefined)
 			attribute = 'active';
-		targets.toggleClass(attribute);
+			targets.each(function() {
+				$(this).toggleClass(attribute);
+			});
 	});
 	$('.' + prefix + 'Next').click(function() {
 		var targets = $('.' + $(this).attr(prefix + '-target'));
