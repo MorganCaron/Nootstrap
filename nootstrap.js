@@ -41,9 +41,7 @@ $(document).ready(function() {
 
 	$('.' + prefix + 'Delete').click(function() {
 		var targets = $('.' + $(this).attr(prefix + '-target'));
-		targets.each(function() {
-			$(this).remove();
-		});
+		targets.remove();
 	});
 
 	$('.' + prefix + 'Add').click(function() {
@@ -63,18 +61,14 @@ $(document).ready(function() {
 		var attribute = $(this).attr(prefix + '-class');
 		if (attribute == undefined)
 			attribute = 'active';
-		targets.each(function() {
-			$(this).removeClass(attribute);
-		});
+		targets.removeClass(attribute);
 	});
 	$('.' + prefix + 'Toggle').click(function() {
 		var targets = $('.' + $(this).attr(prefix + '-target'));
 		var attribute = $(this).attr(prefix + '-class');
 		if (attribute == undefined)
 			attribute = 'active';
-			targets.each(function() {
-				$(this).toggleClass(attribute);
-			});
+			targets.toggleClass(attribute);
 	});
 	$('.' + prefix + 'Next').click(function() {
 		var targets = $('.' + $(this).attr(prefix + '-target'));
