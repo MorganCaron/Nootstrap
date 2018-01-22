@@ -50,9 +50,8 @@ $(document).ready(function() {
 		if (attribute == undefined)
 			attribute = 'active';
 		var duration = $(this).attr(prefix + '-duration');
-		if (duration == undefined)
-			targets.addClass(attribute);
-		else
+		targets.addClass(attribute);
+		if (duration != undefined)
 			targets.delay(parseInt(duration)).removeClass(attribute);
 	});
 	$('.' + prefix + 'Remove').click(function() {
