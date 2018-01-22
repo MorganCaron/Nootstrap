@@ -39,6 +39,11 @@ $(document).ready(function() {
 	updateParallax();
 	updateChangeOnTop();
 
+	$('.' + prefix + 'Delete').click(function() {
+		var targets = $('.' + $(this).attr(prefix + '-target'));
+		targets.remove();
+	});
+
 	$('.' + prefix + 'Add').click(function() {
 		var targets = $('.' + $(this).attr(prefix + '-target'));
 		var attribute = $(this).attr(prefix + '-class');
