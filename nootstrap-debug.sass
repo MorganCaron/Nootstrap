@@ -29,6 +29,16 @@
 				@for $size from 1 through 12
 					.col-#{$size}
 						+showMarkName(".col-#{$size}")
+					.col-xs-#{$size}
+						+showMarkName(".col-xs-#{$size}")
+					.col-sm-#{$size}
+						+showMarkName(".col-sm-#{$size}")
+					.col-md-#{$size}
+						+showMarkName(".col-md-#{$size}")
+					.col-lg-#{$size}
+						+showMarkName(".col-lg-#{$size}")
+					.col-xl-#{$size}
+						+showMarkName(".col-xl-#{$size}")
 				.col, [class*="col-"]
 					-webkit-transform: scale3d(0.9, 0.9, 0.9)
 					transform: scale3d(0.9, 0.9, 0.9)
