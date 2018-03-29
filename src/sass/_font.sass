@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300')
+
+body
+    font-family: "Open Sans", sans-serif
+    font-weight: 300
+    color: lighten(black, 20%)
+
+@for $size from 1 through 6
+    h#{$size}
+        font-size: (3.5rem - .4rem * ($size - 1))
+
+p
+    margin-bottom: 1rem
+
+p.lead
+    font-size: 1.2rem
+
+a
+	text-decoration: none
+	color: lighten(black, 20%)
+	&:hover
+		text-decoration: none
+		color: lighten(black, 10%)

@@ -1,3 +1,5 @@
+import '../sass/nootstrap.sass';
+
 /*
  * Nootstrap - Not Bootstrap
  * Front-End Framework web
@@ -9,7 +11,7 @@ var prefix = 'noot';
 function updateParallax() {
 	$('.parallax').each(function() {
 		var scrolled = ($(document).scrollTop() - $(this).offset().top);
-		$(this).find('.parallax-background').css('transform', 'translateY(' + scrolled/2 + 'px)');
+		$(this).find('.parallax-background').css('transform', 'translateX(-' + $(this).offset().left + 'px) translateY(' + scrolled/2 + 'px)');
 	});
 }
 
@@ -115,6 +117,11 @@ $(document).ready(function() {
 });
 
 $(window).scroll(function() {
+	updateParallax();
+	updateChangeOnTop();
+});
+
+$(window).resize(function() {
 	updateParallax();
 	updateChangeOnTop();
 });

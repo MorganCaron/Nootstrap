@@ -1,8 +1,4 @@
-body
-	+select(none)
-
 =col_width($width)
-	-ms-flex-basis: ($width / 12) * 100%
 	flex-basis: ($width / 12) * 100%
 	max-width: ($width / 12) * 100%
 
@@ -12,9 +8,8 @@ body
 			+col_width($width)
 
 .container, .container-fluid
-	+select(text)
-	padding-left: 10px
-	padding-right: 10px
+	padding-left: 1rem
+	padding-right: 1rem
 
 .container
 	width: 100%
@@ -26,34 +21,34 @@ body
 	flex-direction: row
 	flex-wrap: wrap
 	align-content: flex-start
-	margin-left: -10px
-	margin-right: -10px
+	margin-left: -1rem
+	margin-right: -1rem
 
 .col
 	display: inline-flex
 
 .col, [class*="col-"]
 	width: 100%
-	padding-left: 10px
-	padding-right: 10px
+	padding-left: 1rem
+	padding-right: 1rem
 
 @for $width from 1 through 12
 	.col-#{$width}, .col-xs-#{$width}
 		+col_width($width)
 
-@media (min-width: 576px)
+@media (min-width: $sm)
 	.container
-		max-width: 540px
+		max-width: $sm
 	+col_type_width("sm")
-@media (min-width: 768px)
+@media (min-width: $md)
 	.container
-		max-width: 720px
+		max-width: $md
 	+col_type_width("md")
-@media (min-width: 992px)
+@media (min-width: $lg)
 	.container
-		max-width: 960px
+		max-width: $lg
 	+col_type_width("lg")
-@media (min-width: 1200px)
+@media (min-width: $xl)
 	.container
-		max-width: 1140px
+		max-width: $xl
 	+col_type_width("xl")
