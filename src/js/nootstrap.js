@@ -22,11 +22,11 @@ function updateChangeOnTop() {
 		$('.changeOnTop').removeClass('onTop');
 }
 
-function toggleDebug() {
+export function toggleDebug() {
 	$('html').toggleClass('noot-debug');
-}
+};
 
-function newNotification(content) {
+export function newNotification(content) {
 	if ($('body > .' + prefix + '-notifications').length == 0)
 		$('body').append('<div class="' + prefix + '-notifications"></div>');
 	$('body > .' + prefix + '-notifications').append('<div class="' + prefix + '-notification"></div>');
@@ -35,7 +35,7 @@ function newNotification(content) {
 		if ($('body > .' + prefix + '-notifications > .' + prefix + '-notification').length == 0)
 			$('body > .' + prefix + '-notifications').remove();
 	});
-}
+};
 
 $(document).ready(function() {
 	updateParallax();
