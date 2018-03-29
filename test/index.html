@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nootstrap - Unit Test</title>
+    </head>
+    <body>
+        <nav class="navbar fixed-top">
+            <span>Navbar</span>
+            <ul class="expand-md">
+                <li>Element</li>
+                <li>Element</li>
+                <li>Element</li>
+                <li>Element</li>
+            </ul>
+            <span>Navbar</span>
+        </nav>
+
+        <div class="container">
+
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+
+            <p class="lead">p.lead</p>
+            <p>p</p>
+
+            <a href="#">a</a>
+            <a href="#">a.btn</a>
+
+            <button type="button" name="button">button</button>
+            <button type="button" name="button" class="btn">button.btn</button>
+
+            <br><br>
+
+            <nav class="navbar">
+                <span>Navbar</span>
+                <ul class="expand-md">
+                    <li>Element</li>
+                    <li>Element</li>
+                    <li>Element</li>
+                    <li>Element</li>
+                </ul>
+                <span>Navbar</span>
+            </nav>
+
+            <br>
+
+            <div class="parallax">
+                <div class="parallax-background">
+                    <p class="lead">.parallax-background</p>
+                </div>
+                <div class="parallax-content">
+                    <p class="lead">.parallax-content</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Notification</h2>
+                    <button id="notificationButton" type="button" class="btn">Notification</button>
+                    <h2>Debug</h2>
+                    <button id="debugButton" class="btn">Debug Mode</button>
+                </div>
+                <div class="col-md-8">
+                    <h2>Toggler</h2>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3>Toggle</h3>
+                            <button class="btn nootToggle" noot-target="toggler-1">Demo</button>
+                            <p class="toggler-1">Look at me</p>
+                            <h3>Add/Remove</h3>
+                            <button class="btn nootAdd" noot-target="toggler-2">Demo</button>
+                            <div class="toggler-2">
+                                <div class="container">
+                                    <div class="col">
+                                        <p class="nootRemove" noot-target="toggler-2">Click me to close fullscreen</p>
+                                    </div>
+                                    <div class="col">
+                                        <h6>instead of text, you could use buttons, images, ...</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Add with delay</h3>
+                            <button class="btn nootAdd" noot-target="toggler-3" noot-duration="2000">Demo</button>
+                            <p class="toggler-3">Test</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <h3>Next/Previous</h3>
+                            <button class="btn nootPrev" noot-target="toggler-4">Previous</button>
+                            <button class="btn nootNext" noot-target="toggler-4">Next</button>
+                            <h3>Goto</h3>
+                            <button class="btn nootGoto" noot-target="toggler-4" noot-goto="0">1</button>
+                            <button class="btn nootGoto" noot-target="toggler-4" noot-goto="1">2</button>
+                            <button class="btn nootGoto" noot-target="toggler-4" noot-goto="2">3</button>
+                            <ul class="toggler-4">
+                                <li class="active">Element 1</li>
+                                <li>Element 2</li>
+                                <li>Element 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container-fluid">
+
+            <div class="parallax">
+                <div class="parallax-background">
+                    <p class="lead">.parallax-background</p>
+                </div>
+                <div class="parallax-content">
+                    <p class="lead">.parallax-content</p>
+                </div>
+            </div>
+
+        </div>
+        <link rel="stylesheet" href="../dist/nootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../dist/nootstrap.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>

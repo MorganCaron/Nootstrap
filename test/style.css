@@ -1,0 +1,32 @@
+body {
+    min-height: 200vh;
+    margin-top: 3rem;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.navbar li, .navbar span {
+    margin: 0.5rem 1rem;
+    color: white;
+}
+
+.parallax {
+    min-height: 20rem;
+}
+
+.parallax-background {
+    background-image: url(https://picsum.photos/1920/1080/?random);
+}
+
+.parallax p {
+    line-height: 20rem;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+}
+
+.btn {
+    padding: .25rem .5rem
+}
