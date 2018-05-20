@@ -1,0 +1,25 @@
+.navbar
+	display: flex
+	justify-content: space-between
+	align-items: center
+	span, a
+		white-space: nowrap
+	ul
+		display: flex
+		flex-direction: row
+		margin-top: 0
+		margin-bottom: 0
+		padding-left: 0
+		list-style: none
+
+@each $name, $value in $breakpoints
+    .expand-#{$name}, ul.expand-#{$name}
+        ul
+            display: none
+        .burger
+            display: flex
+        @media (min-width: $value)
+            ul
+                display: flex
+            .burger
+                display: none

@@ -1,17 +1,15 @@
-import '../sass/nootstrap.sass';
-
 /*
  * Nootstrap - Not Bootstrap
  * Front-End Framework web
  * Morgan Caron
  */
 
-var prefix = 'noot';
+let prefix = 'noot';
 
 function updateParallax() {
 	$('.parallax').each(function() {
 		var scrolled = ($(document).scrollTop() - $(this).offset().top);
-		$(this).find('.parallax-background').css('transform', 'translateX(-' + $(this).offset().left + 'px) translateY(' + scrolled/2 + 'px)');
+		$(this).find('.parallax-background').css('transform', 'translateX(-' + $(this).offset().left + 'px) translateY(' + scrolled / 2 + 'px)');
 	});
 }
 
@@ -22,11 +20,11 @@ function updateChangeOnTop() {
 		$('.changeOnTop').removeClass('onTop');
 }
 
-export function toggleDebug() {
+function toggleDebug() {
 	$('html').toggleClass('noot-debug');
 };
 
-export function newNotification(content) {
+function newNotification(content) {
 	if ($('body > .' + prefix + '-notifications').length == 0)
 		$('body').append('<div class="' + prefix + '-notifications"></div>');
 	$('body > .' + prefix + '-notifications').append('<div class="' + prefix + '-notification"></div>');
@@ -70,7 +68,7 @@ $(document).ready(function() {
 		var attribute = $(this).attr(prefix + '-class');
 		if (attribute == undefined)
 			attribute = 'active';
-			targets.toggleClass(attribute);
+		targets.toggleClass(attribute);
 	});
 	$('.' + prefix + 'Next').click(function() {
 		var targets = $('.' + $(this).attr(prefix + '-target'));

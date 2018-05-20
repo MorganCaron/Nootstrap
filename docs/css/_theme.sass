@@ -1,0 +1,159 @@
+@import ../../sass/nootstrap
+
+$background-color: #eee
+$header-background: lighten(black, 25%)
+$header-color: white
+
+$white: #EEEEEE
+$lightgrey: #BBBBBB
+$grey: #888888
+$darkgrey: #333333
+$black: #222222
+$alpha-lightgrey: rgba($darkgrey, 0.3)
+$alpha-grey: rgba($darkgrey, 0.5)
+$alpha-darkgrey: rgba($darkgrey, 0.9)
+$blue: #008CBA
+$gold: #FFD700
+$aqua: #64E6E3
+$purple: #965FF9
+
+=header
+	&, .btn
+		background-color: $header-background
+		&, a
+			color: $header-color
+
+body
+	background-color: $background-color
+
++scrollbar(12px, $blue, $darkgrey)
+
+h2
+	margin: 1rem 0
+	padding-bottom: .2rem
+	border-bottom: 2px solid $header-background
+
+h3
+	margin: 1rem 0
+	&::after
+		content: ''
+		display: block
+		width: 100px
+		height: 2px
+		margin-right: 100%
+		border: 50px solid lighten($header-background, 10%)
+		border-top: 0
+		border-bottom: 0
+		border-left-color: $header-background
+
+hr
+	border: 0
+	border-bottom: 2px solid $header-background
+
+.scroll-arrow
+	width: 40px
+	height: 40px
+	position: absolute
+	bottom: 25px
+	left: 50%
+	transform: translateX(-50%)
+	background-image: url("../img/assets/arrow.png")
+	background-position: 0 0
+	+scrollArrow(3s)
+
+.card
+	border-radius: 3px
+.card-grey
+	background-color: $alpha-lightgrey
+	color: white
+
+@keyframes notificationAnimation
+	0%
+		margin-top: 3rem
+		opacity: 0
+	5%
+		margin-top: 0
+		opacity: 1
+	95%
+		margin-top: 0
+		opacity: 1
+	100%
+		margin-top: -3rem
+		opacity: 0
+.noot-notification
+	margin-bottom: 1rem
+	padding: 0.5rem
+	background-color: white
+	box-shadow: 2px 5px 2px 1px rgba(0, 0, 0, 0.2)
+	font-size: 1rem
+	opacity: 0
+	animation: notificationAnimation 5s ease-in-out
+
+a
+	color: $blue
+
+blockquote
+	border-left-width: 5px
+	background-color: white
+
+[class*=btn]
+	padding: .5rem
+
+.btn-outline
+	color: white
+	background-image: none
+	background-color: transparent
+	border: 1px solid white
+	&:hover
+		color: $black
+		background-color: white
+
+.navbar
+	+header
+	user-select: none
+	font-size: 1rem
+	h1
+		font-size: 2rem
+		margin-bottom: 0
+	a, span
+		padding: .5rem
+
+=brackets
+	border-style: solid
+	border-image: url('../img/assets/brackets.png') 0 48 fill stretch
+.large-brackets
+	+brackets
+	border-width: 10px 48px
+.medium-brackets
+	+brackets
+	border-width: 0px 24px
+.small-brackets
+	+brackets
+	border-width: 0px 12px
+
+.lightgreybar
+	+bar($darkgrey, $lightgrey)
+.greybar
+	+bar($darkgrey, $grey)
+.darkgreybar
+	+bar($white, $darkgrey)
+.blackbar
+	+bar(white, $black)
+.bluebar
+	+bar(white, $blue)
+
+=mountains-background
+	+background-cover("../img/background/mountains1.jpg")
+	background-color: $darkgrey
+	color: white
+=white-background
+	+background-pattern("../img/background/white-background.png")
+	background-color: $background-color
+=grey-background
+	+background-pattern("../img/background/grey-background.png")
+	background-color: $darkgrey
+	color: white
+=darkgrey-background
+	+background-pattern("../img/background/darkgrey-background.png")
+	background-color: $darkgrey
+	color: white
