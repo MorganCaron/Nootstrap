@@ -1,17 +1,58 @@
 @import theme
 
-.changeOnTop
-	transition: all 1s
+.example-content
+	background-color: rgba($blue, .1)
+	min-height: 10rem
 
-body > header > .parallax
-	height: 100vh
-	.parallax-background
-		+mountains-background
+=example-circle($color, $diameter)
+	display: inline-block
+	width: $diameter
+	height: $diameter
+	border-radius: 50%
+	background-color: $color
 
-.mountains-background
-	+mountains-background
-	& + .parallax-content
-		color: white
+.example-black
+	+example-circle($black, 5rem)
+
+.example-darkgrey
+	+example-circle($darkgrey, 5rem)
+
+.example-midgrey
+	+example-circle($midgrey, 5rem)
+
+.example-grey
+	+example-circle($grey, 5rem)
+
+.example-lightgrey
+	+example-circle($lightgrey, 5rem)
+
+.example-silver
+	+example-circle($silver, 5rem)
+
+.example-aluminum
+	+example-circle($aluminum, 5rem)
+
+.example-blue
+	+example-circle($blue, 5rem)
+
+.example-gold
+	+example-circle($gold, 5rem)
+
+.example-aqua
+	+example-circle($aqua, 5rem)
+
+.example-purple
+	+example-circle($purple, 5rem)
+
+=example-block($width)
+	display: inline-block
+	width: $width
+	height: $width
+	text-align: center
+	line-height: $width
+
+.example-block
+	+example-block(5rem)
 
 .toggler-1.active, .toggler-3.active
 	color: blue
@@ -37,19 +78,8 @@ body > header > .parallax
 			overflow: hidden
 
 .toggler-4 .active
-		background-color: $gold
+		background-color: rgba($blue, .1)
 
-.slider-list
-	width: auto
-	height: auto
-	list-style: none
-	margin: 0
-	padding-left: 0
-	li
-		display: none
-		line-height: 0
-		&.active
-			display: block
 #slider-control
 	ul
 		list-style: none
@@ -68,18 +98,7 @@ body > footer
 	user-select: none
 	background-position: center bottom
 	padding-top: 1rem
-	h4
-		background-color: rgba(255, 255, 255, 0.1)
-		margin-top: 0.5em
-		padding: 0.2em
-		border-radius: 2px
 	ul
 		+list-triangle(white)
-		width: 200px
-		margin: auto
 	a
 		color: white
-	#copyright > p
-		margin: 0
-		padding: 0.2rem 0
-		+darkgrey-background

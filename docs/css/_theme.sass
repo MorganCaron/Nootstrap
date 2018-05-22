@@ -1,44 +1,6 @@
 @import ../../sass/nootstrap
 
-=colored-circle($color, $diameter)
-	display: inline-block
-	width: $diameter
-	height: $diameter
-	border-radius: 50%
-	background-color: $color
-
-.example-black
-	+colored-circle($black, 5rem)
-
-.example-darkgrey
-	+colored-circle($darkgrey, 5rem)
-
-.example-midgrey
-	+colored-circle($midgrey, 5rem)
-
-.example-grey
-	+colored-circle($grey, 5rem)
-
-.example-lightgrey
-	+colored-circle($lightgrey, 5rem)
-
-.example-silver
-	+colored-circle($silver, 5rem)
-
-.example-aluminum
-	+colored-circle($aluminum, 5rem)
-
-.example-blue
-	+colored-circle($blue, 5rem)
-
-.example-gold
-	+colored-circle($gold, 5rem)
-
-.example-aqua
-	+colored-circle($aqua, 5rem)
-
-.example-purple
-	+colored-circle($purple, 5rem)
++scrollbar(12px, $blue, $darkgrey)
 
 =default
 	+colors(#eee, #111)
@@ -67,7 +29,15 @@
 body
 	+default
 
-+scrollbar(12px, $blue, $darkgrey)
+.btn
+	+primary
+	padding: .5rem
+
+.muted .btn
+	+default
+
+.secondary .btn
+	+secondary
 
 h2
 	padding-bottom: .2rem
@@ -105,14 +75,7 @@ hr
 	padding: .5rem
 	border-radius: 1px
 	> footer
-		border-top-style: solid
-		border-top-width: 1px
-	&.default
-		border: 1px solid $midgrey
-		> footer
-			border-color: $midgrey
-	&:not(.default) > footer
-		border-color: white
+		border-top: 1px solid white
 
 @keyframes notificationAnimation
 	0%
@@ -139,25 +102,7 @@ hr
 a
 	color: $blue
 
-blockquote
-	border-left-width: 5px
-	background-color: white
-
-[class*=btn]
-	padding: .5rem
-
-.btn-outline
-	color: white
-	background-image: none
-	background-color: transparent
-	border: 1px solid white
-	&:hover
-		color: $black
-		background-color: white
-
 .navbar
-	&, .btn
-		+secondary
 	h1
 		font-size: 2rem
 		margin-bottom: 0
@@ -203,3 +148,25 @@ blockquote
 	+background-pattern("../img/background/darkgrey-background.png")
 	background-color: $darkgrey
 	color: white
+
+body > header > .parallax
+	height: 100vh
+	.parallax-background
+		+mountains-background
+
+.mountains-background
+	+mountains-background
+	& + .parallax-content
+		color: white
+
+.slider-list
+	width: auto
+	height: auto
+	list-style: none
+	margin: 0
+	padding-left: 0
+	li
+		display: none
+		line-height: 0
+		&.active
+			display: block

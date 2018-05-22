@@ -13,7 +13,7 @@
 	</head>
 
 	<body>
-		<nav class="navbar fixed-top">
+		<nav class="navbar secondary fixed-top">
 			<h1><a href="#">Nootstrap</a></h1>
 			<ul>
 				<li><a href="#">Element 1</a></li>
@@ -45,8 +45,56 @@
 				</div>
 			</div>
 		</header>
-		<br>
+		<div class="container example-content">
+			<h2>Container</h2>
+		</div>
+		<div class="container-fluid example-content">
+			<h2>Container Fluid</h2>
+		</div>
 		<div class="container">
+			<h2>Columns</h2>
+			<button id="debugButton" class="btn">Show columns</button>
+			<div class="row">
+				<div class="col-md-3">Column 1</div>
+				<div class="col-md-7">Column 2</div>
+				<div class="col-md-2">Column 3</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h2>Colors</h2>
+					<span class="example-black"></span>
+					<span class="example-darkgrey"></span>
+					<span class="example-midgrey"></span>
+					<span class="example-grey"></span>
+					<span class="example-lightgrey"></span>
+					<span class="example-silver"></span>
+					<span class="example-aluminum"></span>
+					<span class="example-blue"></span>
+					<span class="example-gold"></span>
+					<span class="example-aqua"></span>
+					<span class="example-purple"></span>
+				</div>
+				<div class="col-md-6">
+					<h2>Color Themes</h2>
+					<h3>Themes</h3>
+					<span class="example-block default">Default</span>
+					<span class="example-block muted">Muted</span>
+					<span class="example-block primary">Primary</span>
+					<span class="example-block secondary">Secondary</span>
+					<h3>Invert</h3>
+					<span class="example-block default invert">Default</span>
+					<span class="example-block muted invert">Muted</span>
+					<span class="example-block primary invert">Primary</span>
+					<span class="example-block secondary invert">Secondary</span>
+					<h3>Outline</h3>
+					<span class="example-block default outline">Default</span>
+					<span class="example-block muted outline">Muted</span>
+					<span class="example-block primary outline">Primary</span>
+					<span class="example-block secondary outline">Secondary</span>
+				</div>
+			</div>
 			<h2>Cards</h2>
 			<div class="row">
 				<div class="col-md-6">
@@ -57,7 +105,7 @@
 						<div class="col-6">
 							<div class="card default">
 								<header>
-									<h3>Card</h3>
+									<h4>Card</h4>
 								</header>
 								<div class="card-body">
 									Content
@@ -66,7 +114,7 @@
 							</div>
 							<div class="card muted">
 								<header>
-									<h3>Card</h3>
+									<h4>Card</h4>
 								</header>
 								<div class="card-body">
 									Content
@@ -77,7 +125,7 @@
 						<div class="col-6">
 							<div class="card primary">
 								<header>
-									<h3>Card</h3>
+									<h4>Card</h4>
 								</header>
 								<div class="card-body">
 									Content
@@ -86,7 +134,7 @@
 							</div>
 							<div class="card secondary">
 								<header>
-									<h3>Card</h3>
+									<h4>Card</h4>
 								</header>
 								<div class="card-body">
 									Content
@@ -97,18 +145,6 @@
 					</div>
 				</div>
 			</div>
-			<h3>Colors</h3>
-			<span class="example-black"></span>
-			<span class="example-darkgrey"></span>
-			<span class="example-midgrey"></span>
-			<span class="example-grey"></span>
-			<span class="example-lightgrey"></span>
-			<span class="example-silver"></span>
-			<span class="example-aluminum"></span>
-			<span class="example-blue"></span>
-			<span class="example-gold"></span>
-			<span class="example-aqua"></span>
-			<span class="example-purple"></span>
 			<div class="row">
 				<div class="col-md-4">
 					<h2>Notification</h2>
@@ -209,7 +245,7 @@
 							<img src="img/background/mountains3.jpg" alt="Mountains">
 						</li>
 					</ul>
-					<nav class="navbar">
+					<nav class="navbar secondary">
 						<button class="btn nootPrev" noot-target="slider-list">Previous</button>
 						<ul class="navbar-nav">
 							<li>
@@ -251,7 +287,6 @@
 					<div class="col-sm-4">
 						<h4>Nootstrap</h4>
 						<p class="lead">Sass front-end web framework</p>
-						<hr>
 					</div>
 					<div class="col-sm-4">
 
