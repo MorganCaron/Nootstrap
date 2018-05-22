@@ -5,9 +5,7 @@
 		<title>Nootstrap Example</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="UTF-8">
-		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="css/style.min.css">
-		<!-- JS -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="../js/nootstrap.js"></script>
 		<script src="https://use.fontawesome.com/9a7d39ce25.js"></script>
@@ -28,21 +26,20 @@
 			<div class="parallax">
 				<div class="parallax-background"></div>
 				<div class="parallax-content d-flex">
-					<div class="card card-grey m-auto text-center">
-						<div class="card-body">
-							<h1>Nootstrap</h1>
-							<p class="lead">Sass front-end web framework</p>
-							<a href="https://github.com/MorganCaron/Nootstrap" class="btn btn-outline" title="Download Nootstrap">Download
-								<i class="fa fa-cloud-download" aria-hidden="true"></i>
-							</a>
-							<br>
-							<small>
-								Free and open-source Framework
-								<br> Frequently updated.
-							</small>
-							<hr>
+					<div class="card muted m-auto text-center">
+						<h1>Nootstrap</h1>
+						<p class="lead">Sass front-end web framework</p>
+						<a href="https://github.com/MorganCaron/Nootstrap" class="btn default outline" title="Download Nootstrap">Download
+							<i class="fa fa-cloud-download" aria-hidden="true"></i>
+						</a>
+						<br>
+						<small>
+							Free and open-source Framework
+							<br> Frequently updated.
+						</small>
+						<footer>
 							<p>Scroll down for examples</p>
-						</div>
+						</footer>
 					</div>
 					<div class="scroll-arrow"></div>
 				</div>
@@ -50,24 +47,68 @@
 		</header>
 		<br>
 		<div class="container">
-			<h2>Container</h2>
+			<h2>Cards</h2>
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-6">
 					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
-				<div class="col-md-4">
-					<div class="card">
-						<header>
-							<h3>Card</h3>
-						</header>
-						<div class="card-body">
-							Content
+				<div class="col-md-6">
+					<div class="row no-gutters">
+						<div class="col-6">
+							<div class="card default">
+								<header>
+									<h3>Card</h3>
+								</header>
+								<div class="card-body">
+									Content
+								</div>
+								<footer>Footer</footer>
+							</div>
+							<div class="card muted">
+								<header>
+									<h3>Card</h3>
+								</header>
+								<div class="card-body">
+									Content
+								</div>
+								<footer>Footer</footer>
+							</div>
 						</div>
-						<footer>Footer</footer>
+						<div class="col-6">
+							<div class="card primary">
+								<header>
+									<h3>Card</h3>
+								</header>
+								<div class="card-body">
+									Content
+								</div>
+								<footer>Footer</footer>
+							</div>
+							<div class="card secondary">
+								<header>
+									<h3>Card</h3>
+								</header>
+								<div class="card-body">
+									Content
+								</div>
+								<footer>Footer</footer>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<br>
+			<h3>Colors</h3>
+			<span class="example-black"></span>
+			<span class="example-darkgrey"></span>
+			<span class="example-midgrey"></span>
+			<span class="example-grey"></span>
+			<span class="example-lightgrey"></span>
+			<span class="example-silver"></span>
+			<span class="example-aluminum"></span>
+			<span class="example-blue"></span>
+			<span class="example-gold"></span>
+			<span class="example-aqua"></span>
+			<span class="example-purple"></span>
 			<div class="row">
 				<div class="col-md-4">
 					<h2>Notification</h2>
@@ -84,16 +125,6 @@
 							<p class="toggler-1">Look at me</p>
 							<h3>Add/Remove</h3>
 							<button class="btn nootAdd" noot-target="toggler-2">Demo</button>
-							<div class="toggler-2">
-								<div class="container">
-									<div class="col">
-										<p class="nootRemove" noot-target="toggler-2">Click me to close fullscreen</p>
-									</div>
-									<div class="col">
-										<h6>instead of text, you could use buttons, images, ...</h6>
-									</div>
-								</div>
-							</div>
 							<h3>Add with delay</h3>
 							<button class="btn nootAdd" noot-target="toggler-3" noot-duration="2000">Demo</button>
 							<p class="toggler-3">Test</p>
@@ -113,6 +144,16 @@
 							</ul>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="toggler-2">
+			<div class="container">
+				<div class="col">
+					<p class="nootRemove" noot-target="toggler-2">Click me to close fullscreen</p>
+				</div>
+				<div class="col">
+					<h6>instead of text, you could use buttons, images, ...</h6>
 				</div>
 			</div>
 		</div>
@@ -138,7 +179,7 @@
 		</div>
 		<div class="container">
 			<h2>Ratio</h2>
-			<div class="row">
+			<div class="row no-gutters">
 				<div class="col-md-6">
 					4/3
 					<div class="ratio4-3">
@@ -155,7 +196,7 @@
 		</div>
 		<div class="container">
 			<h2>Slider</h2>
-			<div class="row no-margin">
+			<div class="row">
 				<div class="col-md-8">
 					<ul class="slider-list">
 						<li class="active">

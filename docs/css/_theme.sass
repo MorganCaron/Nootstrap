@@ -1,54 +1,93 @@
 @import ../../sass/nootstrap
 
-$background-color: #eee
-$header-background: lighten(black, 25%)
-$header-color: white
+=colored-circle($color, $diameter)
+	display: inline-block
+	width: $diameter
+	height: $diameter
+	border-radius: 50%
+	background-color: $color
 
-$white: #EEEEEE
-$lightgrey: #BBBBBB
-$grey: #888888
-$darkgrey: #333333
-$black: #222222
-$alpha-lightgrey: rgba($darkgrey, 0.3)
-$alpha-grey: rgba($darkgrey, 0.5)
-$alpha-darkgrey: rgba($darkgrey, 0.9)
-$blue: #008CBA
-$gold: #FFD700
-$aqua: #64E6E3
-$purple: #965FF9
+.example-black
+	+colored-circle($black, 5rem)
 
-=header
-	&, .btn
-		background-color: $header-background
-		&, a
-			color: $header-color
+.example-darkgrey
+	+colored-circle($darkgrey, 5rem)
+
+.example-midgrey
+	+colored-circle($midgrey, 5rem)
+
+.example-grey
+	+colored-circle($grey, 5rem)
+
+.example-lightgrey
+	+colored-circle($lightgrey, 5rem)
+
+.example-silver
+	+colored-circle($silver, 5rem)
+
+.example-aluminum
+	+colored-circle($aluminum, 5rem)
+
+.example-blue
+	+colored-circle($blue, 5rem)
+
+.example-gold
+	+colored-circle($gold, 5rem)
+
+.example-aqua
+	+colored-circle($aqua, 5rem)
+
+.example-purple
+	+colored-circle($purple, 5rem)
+
+=default
+	+colors(#eee, #111)
+
+=muted
+	+colors($alpha-lightgrey, white)
+
+=primary
+	+colors($blue, white)
+
+=secondary
+	+colors($darkgrey, white)
+
+.default
+	+default
+
+.muted
+	+muted
+
+.primary
+	+primary
+
+.secondary
+	+secondary
 
 body
-	background-color: $background-color
+	+default
 
 +scrollbar(12px, $blue, $darkgrey)
 
 h2
-	margin: 1rem 0
 	padding-bottom: .2rem
-	border-bottom: 2px solid $header-background
+	border-bottom: 2px solid $darkgrey
 
 h3
-	margin: 1rem 0
 	&::after
 		content: ''
 		display: block
 		width: 100px
 		height: 2px
 		margin-right: 100%
-		border: 50px solid lighten($header-background, 10%)
+		border: 50px solid lighten($darkgrey, 25%)
 		border-top: 0
 		border-bottom: 0
-		border-left-color: $header-background
+		border-left-color: $darkgrey
 
 hr
 	border: 0
-	border-bottom: 2px solid $header-background
+	border-bottom: 2px solid $darkgrey
 
 .scroll-arrow
 	width: 40px
@@ -62,10 +101,18 @@ hr
 	+scrollArrow(3s)
 
 .card
-	border-radius: 3px
-.card-grey
-	background-color: $alpha-lightgrey
-	color: white
+	margin: .5rem
+	padding: .5rem
+	border-radius: 1px
+	> footer
+		border-top-style: solid
+		border-top-width: 1px
+	&.default
+		border: 1px solid $midgrey
+		> footer
+			border-color: $midgrey
+	&:not(.default) > footer
+		border-color: white
 
 @keyframes notificationAnimation
 	0%
@@ -109,9 +156,8 @@ blockquote
 		background-color: white
 
 .navbar
-	+header
-	user-select: none
-	font-size: 1rem
+	&, .btn
+		+secondary
 	h1
 		font-size: 2rem
 		margin-bottom: 0
@@ -136,7 +182,7 @@ blockquote
 .greybar
 	+bar($darkgrey, $grey)
 .darkgreybar
-	+bar($white, $darkgrey)
+	+bar(white, $darkgrey)
 .blackbar
 	+bar(white, $black)
 .bluebar
