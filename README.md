@@ -1,8 +1,8 @@
 # Nootstrap
 Not Bootstrap: Sass Front-End Web Framework
 
-[Demo](https://morgancaron.github.io/Nootstrap-example/index.html)
-[Source](https://github.com/MorganCaron/Nootstrap-example)
+[Demo](https://morgancaron.github.io/Nootstrap/)
+[Source](https://github.com/MorganCaron/Nootstrap)
 
 ![Noot](https://noot.space/noot.gif)
 
@@ -11,18 +11,16 @@ Not Bootstrap: Sass Front-End Web Framework
 
 ### Sass/SCSS + Javascript
 
-* Import nootstrap.sass file into your Sass/SCSS file
-* Import [jQuery](https://code.jquery.com/)
-* Import nootstrap.js file into your HTML `<head>` mark
+* Import nootstrap.sass file into your Sass/SCSS/js/ts file
+* Import nootstrap.min.js file into your HTML `<head>` mark
 
 **HTML:**
 ```html
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/nootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <script type="text/javascript" src="js/nootstrap.min.js"></script>
   </head>
   <body>
     ...
@@ -42,7 +40,6 @@ or **SCSS** (style.scss):
 ### CSS + Javascript
 
 * Import nootstrap.min.css file into your HTML `<head>` mark
-* Import [jQuery](https://code.jquery.com/)
 * Import nootstrap.js file into your HTML `<head>` mark
 
 **HTML:**
@@ -51,7 +48,6 @@ or **SCSS** (style.scss):
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="css/nootstrap.min.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/nootstrap.js"></script>
   </head>
   <body>
@@ -79,17 +75,6 @@ or **SCSS** (style.scss):
 ```
 
 ## Usage
-
-
-### Toggle Class
-
-```html
-<button class="btn nootToggle" noot-target="target-1" noot-class="active">Toggle .active class</button>
-<button class="btn nootAdd" noot-target="target-1" noot-class="active">Add .active class</button>
-<button class="btn nootRemove" noot-target="target-1" noot-class="active">Remove .active class</button>
-<p id="target-1">Activable element</p>
-```
-Attribute noot-class is optional. Default value: "active"
 
 ### Button
 
@@ -129,7 +114,7 @@ Attribute noot-class is optional. Default value: "active"
 ### Debug
 
 ```javascript
-toggleDebug();
+toggleDebug()
 ```
 
 ### Grid
