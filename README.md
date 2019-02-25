@@ -11,7 +11,7 @@ Not Bootstrap: Sass Front-End Web Framework
 
 ### Sass/SCSS + Javascript
 
-* Import nootstrap.sass file into your Sass/SCSS/js/ts file
+* Import nootstrap.sass file into your Sass/SCSS file
 * Import nootstrap.min.js file into your HTML `<head>` mark
 
 **HTML:**
@@ -19,8 +19,8 @@ Not Bootstrap: Sass Front-End Web Framework
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/style.min.css">
-    <script type="text/javascript" src="js/nootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="yourStyle.min.css">
+    <script type="text/javascript" src="nootstrap.min.js"></script>
   </head>
   <body>
     ...
@@ -35,43 +35,6 @@ Not Bootstrap: Sass Front-End Web Framework
 or **SCSS** (style.scss):
 ```scss
 @import "nootstrap";
-```
-
-### CSS + Javascript
-
-* Import nootstrap.min.css file into your HTML `<head>` mark
-* Import nootstrap.js file into your HTML `<head>` mark
-
-**HTML:**
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="css/nootstrap.min.css">
-    <script type="text/javascript" src="js/nootstrap.js"></script>
-  </head>
-  <body>
-    ...
-  </body>
-</html>
-```
-
-### Debug
-
-* Import nootstrap-debug.min.css after importing nootstrap CSS
-
-**HTML:**
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="css/nootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/nootstrap-debug.min.css">
-  </head>
-  <body>
-    ...
-  </body>
-</html>
 ```
 
 ## Usage
@@ -111,12 +74,6 @@ or **SCSS** (style.scss):
 </div>
 ```
 
-### Debug
-
-```javascript
-toggleDebug()
-```
-
 ### Grid
 
 ```html
@@ -144,13 +101,6 @@ toggleDebug()
   </ul>
   <span>Text right</span>
 </nav>
-```
-
-### Notification
-
-```javascript
-newNotification('text');
-newNotification('<h1>text</h1>');
 ```
 
 ### Parallax
