@@ -1,0 +1,35 @@
+{
+	"name": "Nootstrap",
+	"version": "1.0.0",
+	"description": "Not Bootstrap: Sass Front-End Web Framework",
+	"main": "src/docs/ts/app.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"watch": "webpack-dev-server --mode development --open",
+		"dev": "webpack --mode development",
+		"build": "webpack --mode production"
+	},
+	"keywords": [],
+	"author": "Morgan Caron",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "latest",
+		"@babel/preset-env": "latest",
+		"@intervolga/optimize-cssnano-plugin": "latest",
+		"autoprefixer": "latest",
+		"babel-loader": "latest",
+		"clean-webpack-plugin": "latest",
+		"css-loader": "^1.0.1",
+		"file-loader": "latest",
+		"mini-css-extract-plugin": "latest",
+		"node-sass": "latest",
+		"postcss-loader": "latest",
+		"sass-loader": "latest",
+		"ts-loader": "latest",
+		"typescript": "^3.3.3",
+		"uglifyjs-webpack-plugin": "latest",
+		"webpack": "^4.29.3",
+		"webpack-cli": "^3.2.3",
+		"webpack-dev-server": "latest"
+	}
+}

@@ -5,11 +5,7 @@
 		<title>Nootstrap Example</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/style.min.css">
-		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="../js/nootstrap.js"></script>
-		<script src="https://use.fontawesome.com/9a7d39ce25.js"></script>
-		<script type="text/javascript" src="js/script.js"></script>
+		<link rel="stylesheet" type="text/css" href="dist/app.min.css">
 	</head>
 
 	<body>
@@ -20,7 +16,7 @@
 				<li><a href="#">Element 2</a></li>
 				<li><a href="#">Element 3</a></li>
 			</ul>
-			<span>get on github</span>
+			<a href="https://github.com/MorganCaron/Nootstrap">get on github</a>
 		</nav>
 		<header class="container-fluid">
 			<div class="parallax">
@@ -33,10 +29,7 @@
 							<i class="fa fa-cloud-download" aria-hidden="true"></i>
 						</a>
 						<br>
-						<small>
-							Free and open-source Framework
-							<br> Frequently updated.
-						</small>
+						<small>Free and open-source Framework</small>
 						<footer>
 							<p>Scroll down for examples</p>
 						</footer>
@@ -53,11 +46,10 @@
 		</div>
 		<div class="container">
 			<h2>Columns</h2>
-			<button id="debugButton" class="btn">Show columns</button>
 			<div class="row">
-				<div class="col-md-3">Column 1</div>
-				<div class="col-md-7">Column 2</div>
-				<div class="col-md-2">Column 3</div>
+				<div class="col-md-3 example-content">Column 1</div>
+				<div class="col-md-7 example-content">Column 2</div>
+				<div class="col-md-2 example-content">Column 3</div>
 			</div>
 		</div>
 		<div class="container">
@@ -147,49 +139,8 @@
 			</div>
 			<div class="row">
 				<div class="col-md-4">
-					<h2>Notification</h2>
-					<button id="notificationButton" type="button" class="btn">Notification</button>
 					<h2>Debug</h2>
-					<button id="debugButton" class="btn">Debug Mode</button>
-				</div>
-				<div class="col-md-8">
-					<h2>Toggler</h2>
-					<div class="row">
-						<div class="col-sm-6">
-							<h3>Toggle</h3>
-							<button class="btn nootToggle" noot-target="toggler-1">Demo</button>
-							<p class="toggler-1">Look at me</p>
-							<h3>Add/Remove</h3>
-							<button class="btn nootAdd" noot-target="toggler-2">Demo</button>
-							<h3>Add with delay</h3>
-							<button class="btn nootAdd" noot-target="toggler-3" noot-duration="2000">Demo</button>
-							<p class="toggler-3">Test</p>
-						</div>
-						<div class="col-sm-6">
-							<h3>Next/Previous</h3>
-							<button class="btn nootPrev" noot-target="toggler-4">Previous</button>
-							<button class="btn nootNext" noot-target="toggler-4">Next</button>
-							<h3>Goto</h3>
-							<button class="btn nootGoto" noot-target="toggler-4" noot-goto="0">1</button>
-							<button class="btn nootGoto" noot-target="toggler-4" noot-goto="1">2</button>
-							<button class="btn nootGoto" noot-target="toggler-4" noot-goto="2">3</button>
-							<ul class="toggler-4">
-								<li class="active">Element 1</li>
-								<li>Element 2</li>
-								<li>Element 3</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="toggler-2">
-			<div class="container">
-				<div class="col">
-					<p class="nootRemove" noot-target="toggler-2">Click me to close fullscreen</p>
-				</div>
-				<div class="col">
-					<h6>instead of text, you could use buttons, images, ...</h6>
+					<button class="btn toggleDebug">Debug Mode</button>
 				</div>
 			</div>
 		</div>
@@ -230,56 +181,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<h2>Slider</h2>
-			<div class="row">
-				<div class="col-md-8">
-					<ul class="slider-list">
-						<li class="active">
-							<img src="img/background/mountains1.jpg" alt="Mountains">
-						</li>
-						<li>
-							<img src="img/background/mountains2.jpg" alt="Mountains">
-						</li>
-						<li>
-							<img src="img/background/mountains3.jpg" alt="Mountains">
-						</li>
-					</ul>
-					<nav class="navbar secondary">
-						<button class="btn nootPrev" noot-target="slider-list">Previous</button>
-						<ul class="navbar-nav">
-							<li>
-								<button class="btn nootGoto" noot-target="slider-list" noot-goto="0">1</button>
-							</li>
-							<li>
-								<button class="btn nootGoto" noot-target="slider-list" noot-goto="1">2</button>
-							</li>
-							<li>
-								<button class="btn nootGoto" noot-target="slider-list" noot-goto="2">3</button>
-							</li>
-						</ul>
-						<button class="btn nootNext" noot-target="slider-list">Next</button>
-					</nav>
-				</div>
-				<div class="col-md-4">
-					<div id="slider-control">
-						<ul>
-							<li>
-								<button class="btn nootGoto" noot-target="slider-list" noot-goto="0">1</button>
-							</li>
-							<li>
-								<button class="btn nootGoto" noot-target="slider-list" noot-goto="1">2</button>
-							</li>
-							<li>
-								<button class="btn nootGoto" noot-target="slider-list" noot-goto="2">3</button>
-							</li>
-						</ul>
-						<button class="btn nootPrev" noot-target="slider-list">Previous</button>
-						<button class="btn nootNext" noot-target="slider-list">Next</button>
-					</div>
-				</div>
-			</div>
-		</div>
 		<br>
 		<footer class="container-fluid">
 			<div class="container">
@@ -301,6 +202,10 @@
 				</div>
 			</div>
 		</footer>
+
+		<script type="text/javascript" src="dist/nootstrap.min.js"></script>
+		<script src="https://use.fontawesome.com/9a7d39ce25.js"></script>
+		<script type="text/javascript" src="dist/app.min.js"></script>
 	</body>
 
 </html>
