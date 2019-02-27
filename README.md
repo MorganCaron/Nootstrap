@@ -1,41 +1,13 @@
 # Nootstrap
 Not Bootstrap: Sass Front-End Web Framework
 
-[Demo](https://morgancaron.github.io/Nootstrap/)
-[Source](https://github.com/MorganCaron/Nootstrap)
+[Demo & Documentation](https://morgancaron.github.io/Nootstrap/)
 
 ![Noot](https://noot.space/noot.gif)
 
 ## Installation
 
-
-### Sass/SCSS + Javascript
-
-* Import nootstrap.sass file into your Sass/SCSS file
-* Import nootstrap.min.js file into your HTML `<head>` mark
-
-**HTML:**
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="yourStyle.min.css">
-    <script type="text/javascript" src="nootstrap.min.js"></script>
-  </head>
-  <body>
-    ...
-  </body>
-</html>
-```
-
-**Sass** (style.sass):
-```sass
-@import nootstrap
-```
-or **SCSS** (style.scss):
-```scss
-@import "nootstrap";
-```
+* Import the nootstrap.sass and nootstrap.ts files into your project.
 
 ## Usage
 
