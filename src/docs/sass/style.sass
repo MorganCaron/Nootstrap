@@ -56,44 +56,6 @@
 .example-block
 	+example-block(5rem)
 
-.toggler-1.active, .toggler-3.active
-	color: blue
-	font-size: 1.5rem
-
-.toggler-2
-	transition: font-size 0.5s
-	background-color: teal
-	color: white
-	height: 0
-	visibility: hidden
-	&.active
-		height: auto
-		visibility: visible
-		position: fixed
-		top: 0
-		bottom: 0
-		left: 0
-		right: 0
-		z-index: 1000
-		font-size: 3rem
-		::root
-			overflow: hidden
-
-.toggler-4 .active
-		background-color: rgba($blue, .1)
-
-#slider-control
-	ul
-		list-style: none
-		margin: 0
-		padding-left: 0
-		button
-			width: 100%
-
-.elements3d .parallax
-	min-height: 10rem
-	box-shadow: 3px 3px 8px 1px rgba(0,0,0,0.2)
-
 body > footer
 	+mountains-background
 	+background-fixed

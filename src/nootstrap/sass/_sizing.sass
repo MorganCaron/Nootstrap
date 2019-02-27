@@ -1,3 +1,5 @@
+$spacer: 1rem
+
 @for $size from 1 through 4
     .mw-#{$size * 25}
         max-width: $size * 25%
@@ -7,3 +9,13 @@
         width: $size * 25%
     .h-#{$size * 25}
         height: $size * 25%
+
+@for $size from 0 through 5
+	.mw-#{$size}
+		max-width: $spacer * $size * .25 !important
+	.mh-#{$size}
+		max-height: $spacer * $size * .25 !important
+	.w-#{$size}
+		width: $spacer * $size * .25 !important
+	.h-#{$size}
+		height: $spacer * $size * .25 !important

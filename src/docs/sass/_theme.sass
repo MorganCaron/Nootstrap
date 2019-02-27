@@ -77,28 +77,6 @@ hr
 	> footer
 		border-top: 1px solid white
 
-@keyframes notificationAnimation
-	0%
-		margin-top: 3rem
-		opacity: 0
-	5%
-		margin-top: 0
-		opacity: 1
-	95%
-		margin-top: 0
-		opacity: 1
-	100%
-		margin-top: -3rem
-		opacity: 0
-.noot-notification
-	margin-bottom: 1rem
-	padding: 0.5rem
-	background-color: white
-	box-shadow: 2px 5px 2px 1px rgba(0, 0, 0, 0.2)
-	font-size: 1rem
-	opacity: 0
-	animation: notificationAnimation 5s ease-in-out
-
 a
 	color: $blue
 
@@ -107,7 +85,7 @@ a
 		font-size: 2rem
 		margin-bottom: 0
 	a, span
-		padding: .5rem
+		margin: .5rem
 
 =brackets
 	border-style: solid
@@ -158,15 +136,3 @@ body > header > .parallax
 	+mountains-background
 	& + .parallax-content
 		color: white
-
-.slider-list
-	width: auto
-	height: auto
-	list-style: none
-	margin: 0
-	padding-left: 0
-	li
-		display: none
-		line-height: 0
-		&.active
-			display: block

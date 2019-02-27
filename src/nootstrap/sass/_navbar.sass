@@ -17,6 +17,14 @@
 		padding-left: 0
 		list-style: none
 
+.burger
+	+ratio(1, 1)
+	text-align: center
+	font-size: 2rem
+	font-weight: bolder
+	&, &::before
+		transform: rotate(90deg)
+
 @each $name, $value in $breakpoints
     .expand-#{$name}, ul.expand-#{$name}
         ul
