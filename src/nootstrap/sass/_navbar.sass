@@ -3,7 +3,7 @@
 	justify-content: space-between
 	align-items: center
 	user-select: none
-	h1, h2, h3, h4, h5, h6
+	h1, h2, h3, h4, h5, h6, button
 		margin: 0
 	a
 		color: currentColor
@@ -18,12 +18,10 @@
 		list-style: none
 
 .burger
-	+ratio(1, 1)
 	text-align: center
 	font-size: 2rem
 	font-weight: bolder
-	&, &::before
-		transform: rotate(90deg)
+	transform: rotate(90deg)
 
 @each $name, $value in $breakpoints
     .expand-#{$name}, ul.expand-#{$name}
