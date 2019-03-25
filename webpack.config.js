@@ -89,7 +89,9 @@ module.exports = function(env, argv) {
 			]
 		},
 		plugins: [
-			new CleanWebpackPlugin(['dist/*']),
+			new CleanWebpackPlugin({
+				cleanOnceBeforeBuildPatterns: ['dist/*']
+			}),
 			new MiniCssExtractPlugin({
 				filename: "[name].min.css",
 				chunkFilename: "[id].min.css"

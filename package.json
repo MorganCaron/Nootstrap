@@ -26,10 +26,10 @@
 		"postcss-loader": "latest",
 		"sass-loader": "latest",
 		"ts-loader": "latest",
-		"typescript": "^3.3.3",
+		"typescript": "latest",
 		"uglifyjs-webpack-plugin": "latest",
-		"webpack": "^4.29.3",
-		"webpack-cli": "^3.2.3",
+		"webpack": "latest",
+		"webpack-cli": "latest",
 		"webpack-dev-server": "latest"
 	}
 }
