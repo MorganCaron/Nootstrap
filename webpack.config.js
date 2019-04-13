@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssnanoPlugin = require('@intervolga/optimize-cssnano-plugin')
@@ -5,13 +6,23 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = function(env, argv) {
 	const dev = (argv.mode === 'development')
+	const prod = !dev
+	const minimize = prod
+	const sourceMap = dev
 	const cssLoaders = [
-		MiniCssExtractPlugin.loader,
+		{
+			loader: MiniCssExtractPlugin.loader,
+			options: {
+				hmr: dev,
+			},
+		},
 		{
 			loader: 'css-loader',
 			options: {
-				importLoaders: 2,
-				sourceMap: true
+				importLoaders: 1,
+				camelCase: true,
+				minimize: minimize,
+				sourceMap: sourceMap
 			}
 		},
 		{
@@ -22,14 +33,14 @@ module.exports = function(env, argv) {
 						browsers: ['last 2 versions']
 					})
 				],
-				sourceMap: true
+				sourceMap: sourceMap
 			}
 		}
 	]
 	const sassLoader = {
 		loader: 'sass-loader',
 		options: {
-			sourceMap: true
+			sourceMap: sourceMap
 		}
 	}
 	const jsLoader = {
@@ -49,13 +60,20 @@ module.exports = function(env, argv) {
 	return {
 		mode: argv.mode,
 		entry: {
-			app: './src/docs/ts/app.ts',
-			nootstrap: './src/nootstrap/ts/nootstrap.ts'
+			app: ['./src/docs/ts/App.ts', './src/docs/sass/style.sass']
 		},
 		output: {
-			filename: '[name].min.js'
+			path: __dirname + '/dist',
+			filename: (dev ? '[name].min.js' : '[name].[contenthash].min.js'),
+			sourceMapFilename: (dev ? '[name].js.map' : '[name].[contenthash].js.map'),
+			hotUpdateChunkFilename: 'hot/hot-update.js',
+			hotUpdateMainFilename: 'hot/hot-update.json'
 		},
 		watch: dev,
+		devtool: 'inline-source-map',
+		devServer: {
+			contentBase: './dist'
+		},
 		resolve: {
 			extensions: ['.ts', '.tsx', '.js', '.json', '.css', '.sass', '.scss', '.png', '.svg', '.jpg', '.gif']
 		},
@@ -82,19 +100,25 @@ module.exports = function(env, argv) {
 					exclude: /(node_modules|bower_components)/,
 				},
 				{
-					test: /\.(png|svg|jpg|gif)$/,
+					test: /\.(png|svg|jpe?g|gif)$/,
 					use: fileLoader,
 					exclude: /(node_modules|bower_components)/
 				}
 			]
 		},
 		plugins: [
-			new CleanWebpackPlugin({
-				cleanOnceBeforeBuildPatterns: ['dist/*']
+			new CleanWebpackPlugin(),
+			new HtmlWebpackPlugin({
+				filename: (dev ? 'index.html' : '../index.html'),
+				template: 'src/docs/index.html',
+				minify: minimize,
+				cache: true,
+				showErrors: dev
 			}),
 			new MiniCssExtractPlugin({
-				filename: "[name].min.css",
-				chunkFilename: "[id].min.css"
+				filename: (dev ? '[name].min.css' : '[name].[contenthash].min.css'),
+				chunkFilename: (dev ? '[id].min.css' : '[id].[contenthash].min.css'),
+				disable: dev
 			}),
 			new OptimizeCssnanoPlugin({
 				cssnanoOptions: {
@@ -107,7 +131,7 @@ module.exports = function(env, argv) {
 			}),
 			new UglifyJsPlugin({
 				test: /\.js($|\?)/i,
-				sourceMap: true,
+				sourceMap: sourceMap,
 				cache: true,
 				parallel: true
 			})
