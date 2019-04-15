@@ -1,5 +1,5 @@
 {
-	"name": "Nootstrap",
+	"name": "nootstrap",
 	"version": "1.0.0",
 	"description": "Not Bootstrap: Sass Front-End Web Framework",
 	"main": "src/docs/ts/App.ts",
