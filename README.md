@@ -1,4 +1,7 @@
 # Nootstrap
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/MorganCaron/Nootstrap.svg)](https://greenkeeper.io/)
+
 Not Bootstrap: Sass Front-End Web Framework
 
 [Demo & Documentation](https://morgancaron.github.io/Nootstrap/)
