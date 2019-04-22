@@ -1,89 +1,60 @@
 # Nootstrap
-Not Bootstrap: Sass Front-End Web Framework
 
-[Demo & Documentation](https://morgancaron.github.io/Nootstrap/)
+[![Nootstrap](src/docs/img/assets/nootnoot.gif)](https://morgancaron.github.io/Nootstrap/)
 
-![Noot](https://noot.space/noot.gif)
+*Not Bootstrap: Sass Front-End Web Framework*
 
-## Installation
+![Travis CI](https://img.shields.io/travis/com/MorganCaron/Nootstrap.svg?style=flat-square)
+[![Greenkeeper badge](https://badges.greenkeeper.io/MorganCaron/Nootstrap.svg?style=flat-square)](https://greenkeeper.io/)
+![GitHub](https://img.shields.io/github/license/MorganCaron/IsometricSass.svg?style=flat-square)
 
-* Import the nootstrap.sass and nootstrap.ts files into your project.
+## Documentation
 
-## Usage
+For full demo & documentation, visit [https://morgancaron.github.io/Nootstrap/](https://morgancaron.github.io/Nootstrap/)
 
-### Button
+## Goals
 
-```html
-<a href="#" class="btn">Button 1</a>
-<button class="btn">Button 2</button>
+- Responsive
+- Good code quality
+- Good browser support
+- Good performances
+- Beautiful
+- Easy to use
+- No JavaScript
+
+
+## Why?
+
+You probably know Bootstrap, the framework that provides a collection of tools useful for creating website and web application design.
+Although it is excellent, too many people use it without customizing the default theme. All sites end up looking alike, without having a real design of their own.
+
+Nootstrap is a SASS framework that offers the same tools as Bootstrap (with a few more) without proposing any default style, leaving the developers to create their own.
+
+## Who?
+
+You can use Nootstrap regardless of the size of your web project. It will just take you more time to design the graphic theme of your site in Sass or CSS.
+
+## How?
+
+Just paste this in your style.sass file:
+```sass
+@import nootstrap
+```
+And this in your script.ts file:
+```ts
+import nootstrap
 ```
 
-### Card
+## Contributing
 
-```html
-<div class="card">
-  <header>Title</header>
-  <div class="card-body">
-    Content
-   </div>
-   <footer>Footer</footer>
-</div>
+Nootstrap becomes better for everyone when people like you help make it better!
+
+Have any questions or concerns? Did I forget an component? Feel free to submit an issue or pull request.
+
+If you decide to contribute, after downloading a copy of the repository make sure to `npm install` to install dependencies useful for development. Then, you can just run the following to start a server of the demo with live reloading and automatic Sass compiling.
+
+```
+$ npm run dev
 ```
 
-### Container
-
-```html
-<div class="container">
-  Content
-</div>
-```
-
-### Container Fluid
-
-```html
-<div class="container-fluid">
-  Content
-</div>
-```
-
-### Grid
-
-```html
-<div class="container">
-  <div class="row">
-    <div class="col-6">
-      Col 1
-    </div>
-    <div class="col-6">
-      Col 2
-    </div>
-  </div>
-</div>
-```
-
-### Navbar
-
-```html
-<nav class="navbar">
-  <a href="#">Navbar Title</a>
-  <ul class="navbar-nav">
-    <li>Element 1</li>
-    <li>Element 2</li>
-    <li>Element 3</li>
-  </ul>
-  <span>Text right</span>
-</nav>
-```
-
-### Parallax
-
-```html
-<div class="parallax">
-  <div class="parallax-background">
-    <!-- background -->
-  </div>
-  <div class="parallax-content">
-    <!-- content -->
-  </div>
-</div>
-```
+Thanks for taking the time to contribute :)

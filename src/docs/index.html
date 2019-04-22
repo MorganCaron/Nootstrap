@@ -1,18 +1,18 @@
 <!doctype html>
 <html>
 	<head>
-		<title>WebApp</title>
+		<title>Nootstrap</title>
 	</head>
 	<body>
 		<nav class="navbar secondary fixed-top expand-md">
 			<h1><a href="#">Nootstrap</a></h1>
 			<ul>
-				<li><a href="#">Grid</a></li>
-				<li><a href="#">Cards</a></li>
-				<li><a href="#">Themes</a></li>
-				<li><a href="#">Parallax</a></li>
-				<li><a href="#">Ratio</a></li>
-				<li><a href="#">Utils</a></li>
+				<li><a href="#container">Container</a></li>
+				<li><a href="#columns">Columns</a></li>
+				<li><a href="#grid">Grid</a></li>
+				<li><a href="#parallax">Parallax</a></li>
+				<li><a href="#ratio">Ratio</a></li>
+				<li><a href="#debug">Debug</a></li>
 			</ul>
 			<a href="https://github.com/MorganCaron/Nootstrap">get on github</a>
 			<button class="burger w-5">|||</button>
@@ -21,14 +21,14 @@
 			<div class="parallax">
 				<div class="parallax-background"></div>
 				<div class="parallax-content d-flex">
-					<div class="card muted m-auto text-center">
+					<div class="muted m-auto p-2 text-center">
 						<h1>Nootstrap</h1>
 						<p class="lead">Sass front-end web framework</p>
 						<a href="https://github.com/MorganCaron/Nootstrap" class="btn default outline" title="Download Nootstrap">Download
 							<i class="fa fa-cloud-download" aria-hidden="true"></i>
 						</a>
-						<br>
-						<small>Free and open-source Framework</small>
+						<hr>
+						<small>Free, open-source and minimal Framework</small>
 						<footer>
 							<p>Scroll down for examples</p>
 						</footer>
@@ -37,165 +37,147 @@
 				</div>
 			</div>
 		</header>
+
 		<div class="container">
-			<h2>Grid</h2>
+			<h2 id="container">Containers</h2>
 		</div>
-		<div class="container example-content">
-			<h3>Container</h3>
-		</div>
-		<div class="container-fluid example-content">
-			<h3>Container Fluid</h3>
-		</div>
-		<div class="container">
-			<h3>Columns</h3>
-			<div class="row">
-				<div class="col-md-3 example-content">Column 1</div>
-				<div class="col-md-7 example-content">Column 2</div>
-				<div class="col-md-2 example-content">Column 3</div>
+		<div class="debug">
+			<div class="container example-content">
+				<p class="lead">Container</p>
 			</div>
 		</div>
 		<div class="container">
-			<h2>Cards</h2>
-			<div class="row">
-				<div class="col-md-6">
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</div>
-				<div class="col-md-6">
-					<div class="row no-gutters">
-						<div class="col-6">
-							<div class="card default">
-								<header>
-									<h4>Card</h4>
-								</header>
-								<div class="card-body">
-									Content
-								</div>
-								<footer>Footer</footer>
-							</div>
-							<div class="card muted">
-								<header>
-									<h4>Card</h4>
-								</header>
-								<div class="card-body">
-									Content
-								</div>
-								<footer>Footer</footer>
-							</div>
-						</div>
-						<div class="col-6">
-							<div class="card primary">
-								<header>
-									<h4>Card</h4>
-								</header>
-								<div class="card-body">
-									Content
-								</div>
-								<footer>Footer</footer>
-							</div>
-							<div class="card secondary">
-								<header>
-									<h4>Card</h4>
-								</header>
-								<div class="card-body">
-									Content
-								</div>
-								<footer>Footer</footer>
-							</div>
-						</div>
-					</div>
-				</div>
+			<pre class="language-html"><code>&lt;div class="container"&gt;Container&lt;/div&gt;</code></pre>
+		</div>
+
+		<div class="debug">
+			<div class="container-fluid example-content mt-5">
+				<p class="lead">Container Fluid</p>
 			</div>
-			<h2>Themes</h2>
+		</div>
+		<div class="container">
+			<pre class="language-html"><code>&lt;div class="container-fluid"&gt;Container Fluid&lt;/div&gt;</code></pre>
+		</div>
+
+		<div class="container debug-hover">
+			<h2 id="columns">Columns</h2>
 			<div class="row">
-				<div class="col-md-6">
-					<h3>Colors</h3>
-					<span class="example-black"></span>
-					<span class="example-darkgrey"></span>
-					<span class="example-midgrey"></span>
-					<span class="example-grey"></span>
-					<span class="example-lightgrey"></span>
-					<span class="example-silver"></span>
-					<span class="example-aluminum"></span>
-					<span class="example-blue"></span>
-					<span class="example-gold"></span>
-					<span class="example-aqua"></span>
-					<span class="example-purple"></span>
+				<div class="col-md-4 align-center example-content">
+					<p class="lead">Column <small>medium 4/12</small></p>
 				</div>
-				<div class="col-md-6">
-					<h3>Color Themes</h3>
-					<h4>Themes</h4>
-					<span class="example-block default">Default</span>
-					<span class="example-block muted">Muted</span>
-					<span class="example-block primary">Primary</span>
-					<span class="example-block secondary">Secondary</span>
-					<h4>Invert</h4>
-					<span class="example-block default invert">Default</span>
-					<span class="example-block muted invert">Muted</span>
-					<span class="example-block primary invert">Primary</span>
-					<span class="example-block secondary invert">Secondary</span>
-					<h4>Outline</h4>
-					<span class="example-block default outline">Default</span>
-					<span class="example-block muted outline">Muted</span>
-					<span class="example-block primary outline">Primary</span>
-					<span class="example-block secondary outline">Secondary</span>
+				<div class="col-sm-5 align-center example-content">
+					<p class="lead">Column <small>small 5/12</small></p>
+				</div>
+				<div class="col-lg-3 align-center example-content">
+					<p class="lead">Column <small>large 3/12</small></h4>
 				</div>
 			</div>
 		</div>
-		<br>
 		<div class="container">
-			<div class="parallax">
+			<pre class="language-html"><code>&lt;div class="container"&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="col-md-4"&gt;
+			Column 1
+		&lt;/div&gt;
+		&lt;div class="col-sm-5"&gt;
+			Column 2
+		&lt;/div&gt;
+		&lt;div class="col-lg-3"&gt;
+			Column 3
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		</div>
+
+		<div class="container debug-hover">
+			<h2 id="grid">Grid</h2>
+			<div class="grid-6 example-content">
+				<div class="tilex-xl-1 tilex-lg-2 tilex-md-3 tilex-sm-4 tilex-xs-5 tiley-2 tilew-2 tileh-4 align-center">Tile 1</div>
+				<div class="tiley-xl-2 tilex-lg-5 tilew-lg-1 tileh-lg-2 tilex-md-2 tilew-md-4 tileh-md-1 tiley-sm-4 tilex-xs-2 tiley-2 tilew-1 tileh-2 align-center">Tile 2</div>
+			</div>
+		</div>
+		<div class="container">
+			<pre class="language-html"><code>&lt;div class="container"&gt;
+	&lt;div class="grid-6"&gt;
+		&lt;div class="tilex-xl-1 tilex-lg-2 tilex-md-3 tilex-sm-4 tilex-xs-5 tiley-2 tilew-2 tileh-4"&gt;
+			Tile 1
+		&lt;/div&gt;
+		&lt;div class="tiley-xl-2 tilex-lg-5 tilew-lg-1 tileh-lg-2 tilex-md-2 tilew-md-4 tileh-md-1 tiley-sm-4 tilex-xs-2 tiley-2 tilew-1 tileh-2"&gt;
+			Tile 2
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		</div>
+
+		<div class="container">
+			<h2 id="parallax">Parallax</h2>
+			<div class="parallax example-content">
 				<div class="parallax-background mountains-background"></div>
 				<div class="parallax-content">
-					<p>.container > .parallax</p>
+					<p class="absolute w-100 h-100 align-center lead">.container > .parallax</p>
 				</div>
 			</div>
+			<pre class="language-html"><code>&lt;div class="container"&gt;
+	&lt;div class="parallax"&gt;
+		&lt;div class="parallax-background"&gt;&lt;/div&gt;
+		&lt;div class="parallax-content"&gt;
+			Content
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 		</div>
-		<br>
+
 		<div class="container-fluid">
-			<div class="parallax">
+			<div class="parallax example-content">
 				<div class="parallax-background mountains-background"></div>
 				<div class="parallax-content">
-					<div class="container">
-						<p>.container-fluid > .parallax</p>
-					</div>
+					<p class="absolute w-100 h-100 align-center lead">.container-fluid > .parallax</p>
 				</div>
 			</div>
 		</div>
 		<div class="container">
-			<h2>Ratio</h2>
+			<pre class="language-html"><code>&lt;div class="container"&gt;
+	&lt;div class="parallax"&gt;
+		&lt;div class="parallax-background"&gt;&lt;/div&gt;
+		&lt;div class="parallax-content"&gt;
+			Content
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		</div>
+
+		<div class="container">
+			<h2 id="ratio">Ratio</h2>
 			<div class="row no-gutters">
 				<div class="col-md-6">
 					4/3
 					<div class="ratio4-3">
 						<iframe src="https://www.youtube-nocookie.com/embed/eLYhnBaWOzc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 					</div>
+					<pre class="language-html"><code>&lt;div class="ratio4-3"&gt;Content&lt;/div&gt;</code></pre>
 				</div>
 				<div class="col-md-6">
 					16/9
 					<div class="ratio16-9">
 						<iframe src="https://www.youtube-nocookie.com/embed/eLYhnBaWOzc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 					</div>
+					<pre class="language-html"><code>&lt;div class="ratio16-9"&gt;Content&lt;/div&gt;</code></pre>
 				</div>
 			</div>
-			<h2>Utils</h2>
-			<div class="row">
-				<div class="col-md-4">
-					<h3>Debug</h3>
-					<button class="btn toggleDebug">Debug Mode</button>
-				</div>
-			</div>
+
+			<h2 id="debug">Debug</h2>
+			<button class="btn toggleDebug">Debug Mode</button>
+			<pre class="language-html"><code>&lt;div class="debug"&gt;&lt;/div&gt;</code></pre>
 		</div>
-		<br>
-		<footer class="container-fluid">
+
+		<footer class="container-fluid background-fixed mt-5">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4">
 						<h4>Nootstrap</h4>
 						<p class="lead">Sass front-end web framework</p>
 					</div>
-					<div class="col-sm-4">
-
-					</div>
+					<div class="col-sm-4"></div>
 					<div class="col-sm-4">
 						<ul>
 							<li>

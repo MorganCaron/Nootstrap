@@ -1,4 +1,4 @@
-@import ../../nootstrap/sass/nootstrap
+@import ../../sass/nootstrap
 @import animation
 
 +scrollbar(12px, $blue, $darkgrey)
@@ -41,7 +41,7 @@ body
 	+secondary
 
 h2
-	margin-bottom: 1rem
+	margin: 1rem 0
 	padding-bottom: .2rem
 	border-bottom: 2px solid $darkgrey
 
@@ -90,19 +90,6 @@ a
 		margin: .5rem
 	.burger
 		margin-right: 1rem
-
-=brackets
-	border-style: solid
-	border-image: url('../img/assets/brackets.png') 0 48 fill stretch
-.large-brackets
-	+brackets
-	border-width: 10px 48px
-.medium-brackets
-	+brackets
-	border-width: 0px 24px
-.small-brackets
-	+brackets
-	border-width: 0px 12px
 
 .lightgreybar
 	+bar($darkgrey, $lightgrey)

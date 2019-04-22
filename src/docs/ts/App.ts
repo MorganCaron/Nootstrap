@@ -1,3 +1,8 @@
-import '../../nootstrap/sass/nootstrap'
-import '../../nootstrap/ts/nootstrap'
+import '../../sass/nootstrap'
+import '../../ts/nootstrap'
 import '../sass/style'
+
+import * as Prism from 'prismjs'
+import 'prism-themes/themes/prism-atom-dark'
+
+Prism.highlightAll()

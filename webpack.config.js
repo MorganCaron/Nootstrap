@@ -21,7 +21,6 @@ module.exports = function(env, argv) {
 			options: {
 				importLoaders: 1,
 				camelCase: true,
-				minimize: minimize,
 				sourceMap: sourceMap
 			}
 		},
@@ -81,28 +80,23 @@ module.exports = function(env, argv) {
 			rules: [
 				{
 					test: /\.css$/,
-					use: cssLoaders,
-					exclude: /(node_modules|bower_components)/
+					use: cssLoaders
 				},
 				{
 					test: /\.s(a|c)ss$/,
-					use: [...cssLoaders, sassLoader],
-					exclude: /(node_modules|bower_components)/
+					use: [...cssLoaders, sassLoader]
 				},
 				{
 					test: /\.js$/,
-					use: jsLoader,
-					exclude: /(node_modules|bower_components)/
+					use: jsLoader
 				},
 				{
 					test: /\.ts?$/,
-					use: [jsLoader, 'ts-loader'],
-					exclude: /(node_modules|bower_components)/,
+					use: [jsLoader, 'ts-loader']
 				},
 				{
 					test: /\.(png|svg|jpe?g|gif)$/,
-					use: fileLoader,
-					exclude: /(node_modules|bower_components)/
+					use: fileLoader
 				}
 			]
 		},

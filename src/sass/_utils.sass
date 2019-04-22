@@ -7,13 +7,10 @@
 	color: $color
 	background-color: $background-color
 
-.vertical-center
-	display: flex
-	justify-content: space-evenly
-
 =scrollbar($width, $color, $background)
 	::-webkit-scrollbar
 		width: $width
+		height: $width
 	::-webkit-scrollbar-thumb
 		background-color: rgba($color, 0.8)
 		&:hover
