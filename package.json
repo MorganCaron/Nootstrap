@@ -2,7 +2,7 @@
 	"name": "nootstrap",
 	"version": "1.0.0",
 	"description": "Not Bootstrap: Sass Front-End Web Framework",
-	"main": "src/docs/ts/App.ts",
+	"main": "src/ts/nootstrap.ts",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"watch": "webpack-dev-server --mode development --open",

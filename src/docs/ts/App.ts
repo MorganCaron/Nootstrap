@@ -1,4 +1,3 @@
-import '../../sass/nootstrap'
 import '../../ts/nootstrap'
 import '../sass/style'
 

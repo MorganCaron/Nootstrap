@@ -1,3 +1,5 @@
+import '../sass/nootstrap'
+
 class Nootstrap {
 	constructor() {
 		this.updateParallax()
