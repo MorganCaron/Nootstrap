@@ -36,11 +36,7 @@ You can use Nootstrap regardless of the size of your web project. It will just t
 
 ## How?
 
-Just paste this in your style.sass file:
-```sass
-@import nootstrap
-```
-And this in your script.ts file:
+Just paste this in your App.ts file:
 ```ts
 import nootstrap
 ```
