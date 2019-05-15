@@ -4,17 +4,8 @@ class Nootstrap {
 	constructor() {
 		this.updateParallax()
 
-		document.querySelector('.toggleDebug').addEventListener('click', event => {
-			this.toggleDebug()
-		}, false)
-
 		window.addEventListener('resize', this.onWindowResize.bind(this), false)
 		window.addEventListener('scroll', this.onWindowScroll.bind(this), false)
-		this.update()
-	}
-
-	toggleDebug(): void {
-		document.body.classList.toggle('debug')
 	}
 
 	updateParallax(): void {
@@ -32,10 +23,6 @@ class Nootstrap {
 
 	onWindowScroll(): void {
 		this.updateParallax()
-	}
-
-	update(): void {
-		requestAnimationFrame(this.update.bind(this))
 	}
 }
 
