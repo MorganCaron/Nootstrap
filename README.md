@@ -5,7 +5,6 @@
 *Not Bootstrap: Sass Front-End Web Framework*
 
 ![Travis CI](https://img.shields.io/travis/com/MorganCaron/Nootstrap.svg?style=flat-square)
-[![Greenkeeper badge](https://badges.greenkeeper.io/MorganCaron/Nootstrap.svg?style=flat-square)](https://greenkeeper.io/)
 ![GitHub](https://img.shields.io/github/license/MorganCaron/Nootstrap.svg?style=flat-square)
 
 ## Documentation
