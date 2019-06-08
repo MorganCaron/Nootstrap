@@ -24,10 +24,10 @@ $col: '.col, [class*="col-"]'
 	@media (min-width: $value)
 		.container
 			max-width: $value
-		@for $width from 1 through 12
-			.col-#{$name}-#{$width}
-				flex-basis: ($width / 12) * 100%
-				max-width: ($width / 12) * 100%
+	@for $width from 1 through 12
+		.col-#{$name}-#{$width}
+			flex-basis: ($width / 12) * 100%
+			max-width: ($width / 12) * 100%
 
 // gutters
 #{$container}, .col, [class*="col-"]
