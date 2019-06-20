@@ -6,8 +6,8 @@ node_js:
 script: npm run build
 
 before_deploy:
-  - sed -i '/dist/docs/d' .gitignore
-  - sed -i '/dist/app\*/d' .gitignore
+  - sed -i '/dist\/docs/d' .gitignore
+  - sed -i '/dist\/app\*/d' .gitignore
   - sed -i '/index.html/d' .gitignore
 
 deploy:
