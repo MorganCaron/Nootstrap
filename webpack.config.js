@@ -21,8 +21,8 @@ module.exports = (env, argv) => {
 		{
 			loader: MiniCssExtractPlugin.loader,
 			options: {
-				hmr: dev,
-			},
+				hmr: dev
+			}
 		},
 		'css-loader',
 		{
@@ -61,7 +61,7 @@ module.exports = (env, argv) => {
 		output: {
 			path: __dirname + '/dist',
 			publicPath: (dev ? '' : 'dist'),
-			filename: '[name].min.js',
+			filename: '[name].min.js'
 		},
 		watch: dev,
 		devServer: {
@@ -122,9 +122,9 @@ module.exports = (env, argv) => {
 					preset: ['default', {
 						discardComments: {
 							removeAll: true,
-						},
-					}],
-				},
+						}
+					}]
+				}
 			}),
 			new UglifyJsPlugin({
 				test: /\.js($|\?)/i,
