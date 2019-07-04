@@ -9,7 +9,7 @@ module.exports = (env, argv) => {
 			app: ['./src/docs/ts/App.ts', './src/docs/sass/style.sass'],
 			Nootstrap: ['./src/ts/Nootstrap.ts']
 		},
-		indexSrc: 'src/docs/index.html',
-		favicon: 'docs/favicon.png'
+		indexSrc: './src/docs/index.html',
+		favicon: './src/docs/favicon.png'
 	})
 }
