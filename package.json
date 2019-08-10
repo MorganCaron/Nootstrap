@@ -2,6 +2,7 @@
 	"name": "nootstrap",
 	"version": "1.0.0",
 	"description": "Not Bootstrap: Sass Front-End Web Framework",
+	"sass": "src/sass/Nootstrap.sass",
 	"main": "dist/Nootstrap.min.js",
 	"types": "dist/ts/Nootstrap.d.ts",
 	"scripts": {
