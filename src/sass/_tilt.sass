@@ -1,0 +1,14 @@
+=tilt($size)
+	$deg: if($size > 0, 5deg, -5deg) + 5deg * $size
+	display: inline-block
+	transform-origin: top left
+	transform: skewX($deg)
+	padding: 0 2rem
+	& > *
+		transform: skewX(-$deg)
+
+@for $size from 1 through 5
+	.tilt-left-#{$size}
+		+tilt($size)
+	.tilt-right-#{$size}
+		+tilt(-$size)
