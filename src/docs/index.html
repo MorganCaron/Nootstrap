@@ -12,6 +12,8 @@
 				<li><a href="#grid">Grid</a></li>
 				<li><a href="#parallax">Parallax</a></li>
 				<li><a href="#ratio">Ratio</a></li>
+				<li><a href="#tilt">Tilt</a></li>
+				<li><a href="#highlight-underline">Highlight & Underline</a></li>
 				<li><a href="#debug">Debug</a></li>
 			</ul>
 			<a href="https://github.com/MorganCaron/Nootstrap">get on github</a>
@@ -136,7 +138,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<pre class="language-html"><code>&lt;div class="container"&gt;
+			<pre class="language-html"><code>&lt;div class="container-fluid"&gt;
 	&lt;div class="parallax"&gt;
 		&lt;div class="parallax-background"&gt;&lt;/div&gt;
 		&lt;div class="parallax-content"&gt;
@@ -148,7 +150,7 @@
 
 		<div class="container">
 			<h2 id="ratio">Ratio</h2>
-			<div class="row no-gutters">
+			<div class="row">
 				<div class="col-md-6">
 					4/3
 					<div class="ratio4-3">
@@ -165,6 +167,67 @@
 				</div>
 			</div>
 
+			<h2 id="tilt">Tilt</h2>
+			<div class="d-flex justify-content-around mb-3">
+				<div class="tilt-right-1">
+					<p class="lead">Tilt right 1</p>
+				</div>
+				<div class="tilt-right-2">
+					<p class="lead">Tilt right 2</p>
+				</div>
+				<div class="tilt-right-3">
+					<p class="lead">Tilt right 3</p>
+				</div>
+				<div class="tilt-right-4">
+					<p class="lead">Tilt right 4</p>
+				</div>
+				<div class="tilt-right-5">
+					<p class="lead">Tilt right 5</p>
+				</div>
+			</div>
+			<div class="d-flex justify-content-around mb-3">
+				<div class="tilt-left-1">
+					<p class="lead">Tilt left 1</p>
+				</div>
+				<div class="tilt-left-2">
+					<p class="lead">Tilt left 2</p>
+				</div>
+				<div class="tilt-left-3">
+					<p class="lead">Tilt left 3</p>
+				</div>
+				<div class="tilt-left-4">
+					<p class="lead">Tilt left 4</p>
+				</div>
+				<div class="tilt-left-5">
+					<p class="lead">Tilt left 5</p>
+				</div>
+			</div>
+			<pre class="language-html"><code>&lt;div class="tilt-right-3"&gt;
+	&lt;h1&gt;Title&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+
+			<h2 id="highlight-underline">Highlight & Underline</h2>
+			<div class="row">
+				<div class="col-md-6">
+					<a href="#" class="highlight-blue">Highlight link on hover</a><br>
+					<a href="#" class="highlight-blue highlighted">Highlighted link</a>
+				</div>
+				<div class="col-md-6">
+					<a href="#" class="underline-blue">Underline link on hover</a><br>
+					<a href="#" class="underline-blue underlined">Underlined link</a>
+				</div>
+			</div>
+			<pre class="language-html"><code>&lt;a href="#" class="highlight-blue"&gt;Highlight link on hover&lt;/a&gt;
+&lt;a href="#" class="highlight-blue highlighted"&gt;Highlighted link&lt;/a&gt;
+&lt;a href="#" class="underline-blue"&gt;Underline link on hover&lt;/a&gt;
+&lt;a href="#" class="underline-blue underlined"&gt;Underlined link&lt;/a&gt;</code></pre>
+			<pre class="language-sass"><code>.highlight-blue
+	+highlight-hover(blue)
+
+.underline-blue
+	+underline-hover(blue)
+</code></pre>
+
 			<h2 id="debug">Debug</h2>
 			<button class="btn toggleDebug">Debug Mode</button>
 			<pre class="language-html"><code>&lt;div class="debug"&gt;&lt;/div&gt;</code></pre>
@@ -175,7 +238,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<h4>Nootstrap</h4>
-						<p class="lead">Sass front-end web framework</p>
+						<p class="h1">Sass front-end web framework</p>
 					</div>
 					<div class="col-sm-4"></div>
 					<div class="col-sm-4">
