@@ -1,4 +1,3 @@
 node_modules/
-/dist/docs
-/dist/app*
+/dist
 /index.html
