@@ -17,7 +17,7 @@
 	"devDependencies": {
 		"@types/prismjs": "^1.16.0",
 		"babel-plugin-prismjs": "^1.1.1",
-		"prism-themes": "^1.1.0",
+		"prism-themes": "^1.2.0",
 		"prismjs": "^1.17.1",
 		"webpack-config-generator": "git+https://github.com/MorganCaron/webpack-config-generator.git"
 	},
