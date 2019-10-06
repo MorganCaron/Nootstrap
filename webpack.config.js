@@ -11,6 +11,6 @@ module.exports = (env, argv) => {
 		},
 		index: 'src/docs/index.html',
 		resourcesFolder: 'docs/',
-		favicon: 'docs/favicon.png'
+		favicon: './src/docs/favicon.png'
 	})
 }

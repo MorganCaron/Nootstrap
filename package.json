@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"description": "Not Bootstrap: Sass Front-End Web Framework",
 	"sass": "src/sass/Nootstrap.sass",
-	"main": "dist/Nootstrap.min.js",
-	"types": "dist/ts/Nootstrap.d.ts",
+	"main": "build/Nootstrap.min.js",
+	"types": "build/ts/Nootstrap.d.ts",
 	"scripts": {
 		"watch": "webpack-dev-server --mode development --open",
 		"dev": "webpack-dev-server --mode development --open",
@@ -19,7 +19,7 @@
 		"babel-plugin-prismjs": "^1.1.1",
 		"prism-themes": "^1.2.0",
 		"prismjs": "^1.17.1",
-		"webpack-config-generator": "git+https://github.com/MorganCaron/webpack-config-generator.git"
+		"webpack-config-generator": "^1.0.3"
 	},
 	"repository": {
 		"type": "git",
