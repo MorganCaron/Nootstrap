@@ -5,6 +5,8 @@ $container: '.container, .container-fluid'
 	margin-left: auto
 	margin-right: auto
 
-#{$container}:not(.no-gutters)
-	padding-left: 1rem
-	padding-right: 1rem
+#{$container}
+	display: block
+	&:not(.no-gutters)
+		padding-left: 1rem
+		padding-right: 1rem
