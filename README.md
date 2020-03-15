@@ -1,5 +1,5 @@
 # Nootstrap
-[![Nootstrap](../src/docs/img/assets/nootnoot.gif)](https://morgancaron.github.io/Nootstrap/)
+[![Nootstrap](src/docs/img/assets/nootnoot.gif)](https://morgancaron.github.io/Nootstrap/)
 
 ## *Not Bootstrap: Sass Front-End Web Framework*
 You probably know **Bootstrap**, the framework that provides a collection of tools useful for creating website and web application design.\
