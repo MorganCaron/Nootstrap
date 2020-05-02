@@ -11,7 +11,7 @@ class Nootstrap {
 			const parallaxTop = parallax.getBoundingClientRect().top
 			const parallaxLeft = parallax.getBoundingClientRect().left
 			const background = parallax.querySelector('.parallax-background')
-			background.setAttribute('style', 'left: ' + -parallaxLeft + 'px; top: ' + -parallaxTop / 2 + 'px;')
+			background?.setAttribute('style', 'left: ' + -parallaxLeft + 'px; top: ' + -parallaxTop / 2 + 'px;')
 		})
 	}
 
