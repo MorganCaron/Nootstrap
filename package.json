@@ -19,7 +19,7 @@
 		"babel-plugin-prismjs": "^2.0.1",
 		"prism-themes": "^1.4.0",
 		"prismjs": "^1.21.0",
-		"webpack-config-generator": "^1.0.13"
+		"webpack-config-generator": "^1.0.14"
 	},
 	"repository": {
 		"type": "git",
