@@ -10,7 +10,6 @@ module.exports = (env, argv) => {
 			Nootstrap: ["./src/ts/Nootstrap.ts"]
 		},
 		index: "src/docs/index.html",
-		resourcesFolder: "docs/",
 		favicon: "./src/docs/favicon.png"
 	});
 };
