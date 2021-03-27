@@ -16,7 +16,7 @@
 		"@types/prismjs": "^1.16.4",
 		"prism-themes": "^1.6.0",
 		"prismjs": "^1.23.0",
-		"webpack-config-generator": "^1.0.16"
+		"webpack-config-generator": "^1.0.17"
 	},
 	"repository": {
 		"type": "git",
