@@ -4,6 +4,14 @@ class Nootstrap {
 
 		window.addEventListener('resize', this.onWindowResize.bind(this), false)
 		window.addEventListener('scroll', this.onWindowScroll.bind(this), false)
+		document.querySelectorAll('button.burger').forEach(burgerButton => burgerButton.addEventListener('click', event => {
+			event.preventDefault()
+			const navbar = burgerButton.closest('.navbar')
+			if (navbar == null)
+				console.error('The burger button is not located in a navbar')
+			else
+				navbar.classList.toggle('opened')
+		}, false));
 	}
 
 	updateParallax(): void {

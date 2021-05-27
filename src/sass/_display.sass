@@ -16,3 +16,24 @@
 	display: flex
 .d-inline-flex
 	display: inline-flex
+
+@each $name, $value in $breakpoints
+	@media (min-width: $value)
+		.d-#{$name}-none
+			display: none
+		.d-#{$name}-inline
+			display: inline
+		.d-#{$name}-inline-block
+			display: inline-block
+		.d-#{$name}-block
+			display: block
+		.d-#{$name}-table
+			display: table
+		.d-#{$name}-table-cell
+			display: table-cell
+		.d-#{$name}-table-row
+			display: table-row
+		.d-#{$name}-flex
+			display: flex
+		.d-#{$name}-inline-flex
+			display: inline-flex
