@@ -1,7 +1,7 @@
 @import ../../sass/Nootstrap
 @import animation
 
-+scrollbar(18px, #1035aa, #141424)
++scrollbar(18px, #3a4685, #141424)
 
 =default
 	+colors(#eee, #111)
@@ -78,6 +78,7 @@ a
 	h1
 		font-size: 2rem
 		margin-bottom: 0
+		background-color: #3a4685
 	li, a.expand-md, .burger
 		transition: background-color 0.25s ease-in-out
 		margin: .1rem
@@ -104,6 +105,9 @@ a
 	+background-pattern("../img/background/darkgrey-background.png")
 	background-color: $darkgrey
 	color: white
+
+.highlight-white
+	+highlight-hover(rgba(white, .25))
 
 body > header > .parallax
 	height: 100vh
