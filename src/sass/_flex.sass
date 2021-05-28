@@ -1,45 +1,44 @@
-.flex-row
-	flex-direction: row
-.flex-row-reverse
-	flex-direction: row-reverse
-.flex-column
-	flex-direction: column
-.flex-column-reverse
-	flex-direction: column-reverse
+$flex-directions: row, row-reverse, column, column-reverse
+@each $flex-direction in $flex-directions
+	.flex-#{$flex-direction}
+		flex-direction: $flex-direction
+	@each $breakpointName, $breakpointValue in $breakpoints
+		@media (min-width: $breakpointValue)
+			.flex-#{$breakpointName}-#{$flex-direction}
+				flex-direction: $flex-direction !important
 
-.justify-content-start
-	justify-content: flex-start
-.justify-content-end
-	justify-content: flex-end
-.justify-content-center
-	justify-content: center
-.justify-content-between
-	justify-content: space-between
-.justify-content-around
-	justify-content: space-around
-.justify-content-evenly
-	justify-content: space-evenly
+$justify-content-values: (start: flex-start, end: flex-end, center: center, between: space-between, around: space-around, evenly: space-evenly)
+@each $key, $value in $justify-content-values
+	.justify-content-#{$key}
+		justify-content: $value
+	@each $breakpointName, $breakpointValue in $breakpoints
+		@media (min-width: $breakpointValue)
+			.justify-content-#{$breakpointName}-#{$key}
+				justify-content: $value !important
 
-.align-items-start
-	align-items: flex-start
-.align-items-end
-	align-items: flex-end
-.align-items-center
-	align-items: center
-.align-items-stretch
-	align-items: stretch
-.align-items-baseline
-	align-items: baseline
+$align-items-values: (start: flex-start, end: flex-end, center: center, stretch: stretch, baseline: baseline)
+@each $key, $value in $align-items-values
+	.align-items-#{$key}
+		align-items: $value
+	@each $breakpointName, $breakpointValue in $breakpoints
+		@media (min-width: $breakpointValue)
+			.align-items-#{$breakpointName}-#{$key}
+				align-items: $value !important
 
-.align-content-start
-	align-content: flex-start
-.align-content-end
-	align-content: flex-end
-.align-content-center
-	align-content: center
-.align-content-stretch
-	align-content: stretch
-.align-content-between
-	align-content: space-between
-.align-content-around
-	align-content: space-around
+$align-content-values: (start: flex-start, end: flex-end, center: center, stretch: stretch, between: space-between, around: space-around)
+@each $key, $value in $align-content-values
+	.align-content-#{$key}
+		align-content: $value
+	@each $breakpointName, $breakpointValue in $breakpoints
+		@media (min-width: $breakpointValue)
+			.align-content-#{$breakpointName}-#{$key}
+				align-content: $value !important
+
+$align-self-values: (auto: auto, start: flex-start, end: flex-end, center: center, baseline: baseline, stretch: stretch)
+@each $key, $value in $align-self-values
+	.align-self-#{$key}
+		align-self: $value
+	@each $breakpointName, $breakpointValue in $breakpoints
+		@media (min-width: $breakpointValue)
+			.align-self-#{$breakpointName}-#{$key}
+				align-self: $value !important

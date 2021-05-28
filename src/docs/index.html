@@ -4,10 +4,10 @@
 		<title>Nootstrap</title>
 	</head>
 	<body>
-		<nav class="navbar py-1 secondary fixed-top expand-md">
-			<div class="container">
-				<h1 class="tilt-left-5"><a href="#">Nootstrap</a></h1>
-				<ul class="expand-md">
+		<nav class="navbar py-1 secondary fixed-top">
+			<div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+				<h1 class="tilt-left-5 highlight-white mr-5"><a href="#">Nootstrap</a></h1>
+				<ul class="d-flex flex-column flex-md-row navbar-expandable visible-md">
 					<li><a href="#container">Container</a></li>
 					<li><a href="#columns">Columns</a></li>
 					<li><a href="#grid">Grid</a></li>
@@ -17,8 +17,8 @@
 					<li><a href="#highlight-underline">Highlight & Underline</a></li>
 					<li><a href="#debug">Debug</a></li>
 				</ul>
-				<a href="https://github.com/MorganCaron/Nootstrap" class="expand-md">Get on Github</a>
-				<button class="burger">|||</button>
+				<a href="https://github.com/MorganCaron/Nootstrap" class="navbar-expandable visible-md">Github</a>
+				<button class="burger invisible-md align-self-end" toggleClass-target=".navbar-expandable" toggleClass-value="visible"><i class="fas fa-bars"></i></button>
 			</div>
 		</nav>
 		<header class="container-fluid">
@@ -28,9 +28,10 @@
 					<div class="muted m-auto p-2 text-center">
 						<h1>Nootstrap</h1>
 						<p class="lead">Sass front-end web framework</p>
-						<a href="https://github.com/MorganCaron/Nootstrap" class="btn default outline highlight-white lead" title="Download Nootstrap">Download
-							<i class="fa fa-cloud-download" aria-hidden="true"></i>
+						<a href="#installation" class="btn default outline highlight-white lead">
+							Install <i class="fas fa-cloud-download-alt"></i>
 						</a>
+						<a href="https://github.com/MorganCaron/Nootstrap" class="btn default outline highlight-white lead">Github <i class="fab fa-github"></i></a>
 						<hr>
 						<small>Free, open-source and minimal Framework</small>
 						<footer>
@@ -43,41 +44,129 @@
 		</header>
 
 		<div class="container">
+			<h2 id="installation">Installation</h2>
+			<div class="row">
+				<div class="col-md">
+					<p class="lead">
+						Nootstrap is available on the NPM package manager.
+						It can be installed with the following command:
+					</p>
+				</div>
+				<div class="col-md">
+					<pre class="language-bash"><code>npm install nootstrap-ui</code></pre>
+				</div>
+			</div>
+			<h3>Include in your project</h3>
+			<div class="row">
+				<div class="col-md">
+					<h4>HTML</h4>
+					<pre class="language-html"><code>&lt;script defer src="nootstrap-ui/Nootstrap.min.js"&gt;&lt;/script&gt;</code></pre>
+				</div>
+				<div class="col-md">
+					<h4>Sass</h4>
+					<pre class="language-sass"><code>@import nootstrap-ui</code></pre>
+				</div>
+			</div>
+
 			<h2 id="container">Containers</h2>
+			<p class="lead">
+				Containers are layout elements used to limit the width of the page to respect the portrait format of a sheet of paper.
+				Horizontal paddings allow the content of the containers to not touch the borders.
+			</p>
 		</div>
 		<div class="debug">
 			<div class="container example-content">
-				<p class="lead">Container</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
 		</div>
 		<div class="container">
 			<pre class="language-html"><code>&lt;div class="container"&gt;Container&lt;/div&gt;</code></pre>
+			<p class="lead">
+				Fluid containers are similar to containers, except that they don't have margins limiting the width of the page.
+			</p>
 		</div>
-
 		<div class="debug">
 			<div class="container-fluid example-content mt-5">
-				<p class="lead">Container Fluid</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
 		</div>
 		<div class="container">
 			<pre class="language-html"><code>&lt;div class="container-fluid"&gt;Container Fluid&lt;/div&gt;</code></pre>
 		</div>
-
 		<div class="container debug-hover">
 			<h2 id="columns">Columns</h2>
+			<p class="lead">
+				Columns are used to create responsive sites. They have a variable width depending on the screen size.<br>
+				They should always be placed in a row, and the row in a <a href="#container" class="underline-blue">container</a> (or container-fluid).<br>
+				<br>
+				Columns without properties will adjust their sizes to evenly distribute the row space.<br>
+				In this demonstration, you can see how the columns are assembled by hovering over them with the mouse:
+			</p>
 			<div class="row">
-				<div class="col-md-4 align-center example-content">
-					<p class="lead">Column <small>medium 4/12</small></p>
+				<div class="col align-center example-content">
+					<p class="lead">Column 1</p>
 				</div>
-				<div class="col-sm-5 align-center example-content">
-					<p class="lead">Column <small>small 5/12</small></p>
-				</div>
-				<div class="col-lg-3 align-center example-content">
-					<p class="lead">Column <small>large 3/12</small></p>
+				<div class="col align-center example-content">
+					<p class="lead">Column 2</p>
 				</div>
 			</div>
-		</div>
-		<div class="container">
+			<pre class="language-html"><code>&lt;div class="container"&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="col"&gt;
+			Column 1
+		&lt;/div&gt;
+		&lt;div class="col"&gt;
+			Column 2
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+			<p class="lead">
+				The row contains 12 slots for columns.<br>
+				The 2 columns share the 12 slots, so each column occupies 6 slots.<br>
+				<br>
+				It is possible to manually define the size of a column (between 1 and 12):
+			</p>
+			<div class="row">
+				<div class="col-4 align-center example-content">
+					<p class="lead">Column 1 <small>(4/12)</small></p>
+				</div>
+				<div class="col-5 align-center example-content">
+					<p class="lead">Column 2 <small>(5/12)</small></p>
+				</div>
+				<div class="col-3 align-center example-content">
+					<p class="lead">Column 3 <small>(3/12)</small></p>
+				</div>
+			</div>
+			<pre class="language-html"><code>&lt;div class="container"&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="col-4"&gt;
+			Column 1
+		&lt;/div&gt;
+		&lt;div class="col-5"&gt;
+			Column 2
+		&lt;/div&gt;
+		&lt;div class="col-3"&gt;
+			Column 3
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+			<p class="lead">
+				The columns may not have enough space to be displayed on small screens (smartphone, tablet). To remedy this, it is possible to define a breakpoint that will determine from which screen size the columns should be displayed one below the other.<br>
+				There are 4 breakpoints: small (sm), medium (md), large (lg), extra-large (xl)<br>
+				<br>
+				The following example will display its columns differently depending on the screen size (resize the window width to see changes):
+			</p>
+			<div class="row">
+				<div class="col-md-4 align-center example-content">
+					<p class="lead">Column 1 <small>(medium 4/12)</small></p>
+				</div>
+				<div class="col-sm-5 align-center example-content">
+					<p class="lead">Column 2 <small>(small 5/12)</small></p>
+				</div>
+				<div class="col-lg-3 align-center example-content">
+					<p class="lead">Column 3 <small>(large 3/12)</small></p>
+				</div>
+			</div>
 			<pre class="language-html"><code>&lt;div class="container"&gt;
 	&lt;div class="row"&gt;
 		&lt;div class="col-md-4"&gt;
@@ -91,10 +180,14 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-		</div>
 
-		<div class="container debug-hover">
 			<h2 id="grid">Grid</h2>
+			<p class="lead">
+				Grids are similar to columns, they allow to position and size elements.<br>
+				With grids it is not only possible to position elements horizontally, but also vertically (on an invisible grid).<br>
+				The following tiles will be displayed at a different position and size depending on the size of the screen.<br>
+				In this demonstration, a grid has been drawn to facilitate the visualization of the coordinates of the tiles.
+			</p>
 			<div class="grid-6 example-content">
 				<div class="tilex-xl-1 tilex-lg-2 tilex-md-3 tilex-sm-4 tilex-xs-5 tiley-2 tilew-2 tileh-4 align-center">Tile 1</div>
 				<div class="tiley-xl-2 tilex-lg-5 tilew-lg-1 tileh-lg-2 tilex-md-2 tilew-md-4 tileh-md-1 tiley-sm-4 tilex-xs-2 tiley-2 tilew-1 tileh-2 align-center">Tile 2</div>
@@ -111,10 +204,12 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-		</div>
 
-		<div class="container">
 			<h2 id="parallax">Parallax</h2>
+			<p class="lead">
+				Parallaxes superimpose two elements, the one in the background of which will scroll 2 times slower than the one in the foreground (depending on the scroll of the page).<br>
+				This creates a <a href="https://en.wikipedia.org/wiki/Parallax" title="Wikipedia Parallax" class="underline-blue">parallax effect</a> with elements scrolling at different speeds.
+			</p>
 			<div class="parallax example-content">
 				<div class="parallax-background mountains-background"></div>
 				<div class="parallax-content">
@@ -130,7 +225,6 @@
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 		</div>
-
 		<div class="container-fluid">
 			<div class="parallax example-content">
 				<div class="parallax-background mountains-background"></div>
@@ -148,9 +242,7 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-		</div>
 
-		<div class="container">
 			<h2 id="ratio">Ratio</h2>
 			<div class="row">
 				<div class="col-md-6">
@@ -253,5 +345,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src="https://kit.fontawesome.com/818aa08d69.js" crossorigin="anonymous"></script>
 	</body>
 </html>

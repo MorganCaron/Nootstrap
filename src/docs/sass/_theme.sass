@@ -1,7 +1,10 @@
 @import ../../sass/Nootstrap
 @import animation
 
-+scrollbar(18px, #3a4685, #141424)
+$darkblue: #141424
+$lightblue: #3a4685
+
++scrollbar(18px, $lightblue, $darkblue)
 
 =default
 	+colors(#eee, #111)
@@ -13,7 +16,7 @@
 	+colors($blue, white)
 
 =secondary
-	+colors(#141424, white)
+	+colors($darkblue, white)
 
 .default
 	+default
@@ -77,18 +80,18 @@ a
 .navbar
 	h1
 		font-size: 2rem
-		margin-bottom: 0
-		background-color: #3a4685
-	li, a.expand-md, .burger
+		background-color: $lightblue
+	li, & > .container > a, .burger
 		transition: background-color 0.25s ease-in-out
 		margin: .1rem
 		padding: .4rem
 		&:hover
 			background-color: rgba(white, .15)
-	li, a.expand-md
+	li, & > .container > a
 		+underline-hover(white)
 	.burger
-		width: 2.1rem
+		padding: 0 .4rem
+		font-size: 2rem
 
 =mountains-background
 	+background-cover("../img/background/mountains0.jpg")

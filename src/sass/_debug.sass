@@ -35,6 +35,7 @@
 
 // Affiche la legende d'un élément
 =addLegend
+	position: relative
 	&::before
 		display: block
 		position: absolute
@@ -55,32 +56,32 @@
 			&, > .container, > .container-fluid, > .row, > #{$col}
 				+addLegend
 	.container:hover::before
-		content: 'container'
+		content: '.container'
 	.container-fluid:hover::before
-		content: 'container-fluid'
+		content: '.container-fluid'
 	.row:hover
 		&::before
-			content: 'row'
+			content: '.row'
 		> .col::before
-			content: 'col'
+			content: '.col'
 		@for $size from 1 through 12
 			> .col-#{$size}::before
-				content: 'col-#{$size}'
-			> .col-xs-#{$size}::before
-				content: 'col-xs-#{$size}'
-			> .col-sm-#{$size}::before
-				content: 'col-sm-#{$size}'
-			> .col-md-#{$size}::before
-				content: 'col-md-#{$size}'
-			> .col-lg-#{$size}::before
-				content: 'col-lg-#{$size}'
-			> .col-xl-#{$size}::before
-				content: 'col-xl-#{$size}'
+				content: '.col-#{$size}'
+		@each $name, $value in $breakpoints
+			> .col-#{$name}::before
+				content: '.col-#{$name}'
+			@for $size from 1 through 12
+				> .col-#{$name}-#{$size}::before
+					content: '.col-#{$name}-#{$size}'
 
 // Affiche une vue explosée des columns et des tiles
 =debugExplode
 	@extend .debug-block
 	+showLegend
+	.row
+		transition: padding-top .2s ease-in-out
+		&:hover
+			padding-top: 2rem
 	#{$col}, [class*=tile]
 		transition: transform .2s ease-in-out, opacity .2s ease-in-out
 	.row:hover

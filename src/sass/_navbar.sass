@@ -4,46 +4,15 @@
 	justify-content: space-between
 	align-items: center
 	user-select: none
-	.container
-		display: flex
-		flex-wrap: inherit
-		justify-content: space-between
-		align-items: center
 	h1, h2, h3, h4, h5, h6, button
-		margin: 0
+		margin-top: 0
+		margin-bottom: 0
 	a
 		color: currentColor
 	span, a
 		white-space: nowrap
 	ul
-		display: flex
-		flex-direction: row
 		margin-top: 0
 		margin-bottom: 0
 		padding-left: 0
 		list-style: none
-
-.burger
-	text-align: center
-	font-size: 2rem
-	font-weight: bolder
-	transform: rotate(90deg)
-
-@each $name, $value in $breakpoints
-	.burger
-		display: flex
-	.navbar:not(.opened) .expand-#{$name}
-		display: none
-	.navbar.opened.expand-#{$name}
-		align-items: baseline
-		&, ul, ol
-			flex-direction: column
-	@media (min-width: $value)
-		.navbar.expand-#{$name} .burger
-			display: none
-		.navbar:not(.opened) .expand-#{$name}
-			display: flex
-		.navbar.opened.expand-#{$name}
-			align-items: center
-			&, ul, ol
-				flex-direction: row

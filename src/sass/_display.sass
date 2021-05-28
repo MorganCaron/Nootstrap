@@ -1,39 +1,8 @@
-.d-none
-	display: none
-.d-inline
-	display: inline
-.d-inline-block
-	display: inline-block
-.d-block
-	display: block
-.d-table
-	display: table
-.d-table-cell
-	display: table-cell
-.d-table-row
-	display: table-row
-.d-flex
-	display: flex
-.d-inline-flex
-	display: inline-flex
-
-@each $name, $value in $breakpoints
-	@media (min-width: $value)
-		.d-#{$name}-none
-			display: none
-		.d-#{$name}-inline
-			display: inline
-		.d-#{$name}-inline-block
-			display: inline-block
-		.d-#{$name}-block
-			display: block
-		.d-#{$name}-table
-			display: table
-		.d-#{$name}-table-cell
-			display: table-cell
-		.d-#{$name}-table-row
-			display: table-row
-		.d-#{$name}-flex
-			display: flex
-		.d-#{$name}-inline-flex
-			display: inline-flex
+$displays: none, inline, inline-block, block, table, table-cell, table-row, flex, inline-flex
+@each $display in $displays
+	.d-#{$display}
+		display: $display !important
+	@each $breakpointName, $breakpointValue in $breakpoints
+		@media (min-width: $breakpointValue)
+			.d-#{$breakpointName}-#{$display}
+				display: $display !important
