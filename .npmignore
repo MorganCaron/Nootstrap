@@ -1,4 +1,7 @@
 /.github
 node_modules/
+!/build
 /src/docs
+.babelrc
+tsconfig.json
 /webpack.config.js
