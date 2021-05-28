@@ -1,6 +1,6 @@
 {
 	"name": "nootstrap-ui",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Not Bootstrap: Sass Front-End Web Framework",
 	"sass": "src/sass/Nootstrap.sass",
 	"main": "build/Nootstrap.min.js",
