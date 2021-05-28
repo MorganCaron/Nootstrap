@@ -1,6 +1,6 @@
 {
-  "name": "nootstrap",
-  "short_name": "nootstrap",
+  "name": "nootstrap-ui",
+  "short_name": "nootstrap-ui",
   "description": "Not Bootstrap: Sass Front-End Web Framework",
   "dir": "auto",
   "lang": "en-US",
