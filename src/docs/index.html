@@ -4,21 +4,21 @@
 		<title>Nootstrap</title>
 	</head>
 	<body>
-		<nav class="navbar fixed-top py-1 secondary backdrop-blur-1">
+		<nav class="navbar fixed-top py-1 secondary backdrop-blur-5">
 			<div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
 				<h1 class="tilt-left-5 highlight-white mr-5"><a href="#">Nootstrap</a></h1>
 				<ul class="d-flex flex-column flex-md-row navbar-expandable visible-md">
-					<li><a href="#container">Container</a></li>
-					<li><a href="#columns">Columns</a></li>
-					<li><a href="#grid">Grid</a></li>
-					<li><a href="#parallax">Parallax</a></li>
-					<li><a href="#ratio">Ratio</a></li>
-					<li><a href="#tilt">Tilt</a></li>
-					<li><a href="#highlight-underline">Highlight & Underline</a></li>
-					<li><a href="#debug">Debug</a></li>
+					<li><a href="#container" trigger-target=".navbar-expandable" remove-class="visible">Container</a></li>
+					<li><a href="#columns" trigger-target=".navbar-expandable" remove-class="visible">Columns</a></li>
+					<li><a href="#grid" trigger-target=".navbar-expandable" remove-class="visible">Grid</a></li>
+					<li><a href="#parallax" trigger-target=".navbar-expandable" remove-class="visible">Parallax</a></li>
+					<li><a href="#ratio" trigger-target=".navbar-expandable" remove-class="visible">Ratio</a></li>
+					<li><a href="#tilt" trigger-target=".navbar-expandable" remove-class="visible">Tilt</a></li>
+					<li><a href="#highlight-underline" trigger-target=".navbar-expandable" remove-class="visible">Highlight & Underline</a></li>
+					<li><a href="#debug" trigger-target=".navbar-expandable" remove-class="visible">Debug</a></li>
 				</ul>
 				<a href="https://github.com/MorganCaron/Nootstrap" class="navbar-expandable visible-md">Github</a>
-				<button class="burger invisible-md align-self-end" toggleClass-target=".navbar-expandable" toggleClass-value="visible"><i class="fas fa-bars"></i></button>
+				<button class="burger invisible-md align-self-end" trigger-target=".navbar-expandable" toggle-class="visible"><i class="fas fa-bars"></i></button>
 			</div>
 		</nav>
 		<header class="container-fluid">

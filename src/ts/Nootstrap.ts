@@ -4,7 +4,7 @@ class Nootstrap {
 
 		window.addEventListener('resize', this.onWindowResize.bind(this), false)
 		window.addEventListener('scroll', this.onWindowScroll.bind(this), false)
-		document.querySelectorAll('*[toggleClass-target]').forEach(button => button.addEventListener('click', event => this.onToggleClassClicked(button, event), false));
+		document.querySelectorAll('*[trigger-target]').forEach(button => button.addEventListener('click', event => this.onTriggerClick(button, event), false));
 	}
 
 	updateParallax(): void {
@@ -24,16 +24,21 @@ class Nootstrap {
 		this.updateParallax()
 	}
 
-	onToggleClassClicked(element: Element, event: Event): void {
-		event.preventDefault()
-		const targetSelector = element.getAttribute('toggleClass-target')
-		const targetValue = element.getAttribute('toggleClass-value')
-		if (targetSelector === null || targetSelector === '')
-			console.error('toggleClass-target attribute is empty')
-		if (targetValue === null || targetValue === '')
-			console.error('toggleClass-value attribute is empty or missing')
-		else
-			document.querySelectorAll(targetSelector as string).forEach(target => target.classList.toggle(targetValue))
+	onTriggerClick(element: Element, event: Event): void {
+		if (element.hasAttribute('preventDefault'))
+			event.preventDefault()
+		if (!element.hasAttribute('trigger-target'))
+			return;
+		const targetSelector = element.getAttribute('trigger-target')
+		const targets = document.querySelectorAll(targetSelector as string)
+		const addClass = element.getAttribute('add-class')?.split(' ')
+		const removeClass = element.getAttribute('remove-class')?.split(' ')
+		const toggleClass = element.getAttribute('toggle-class')?.split(' ')
+		targets.forEach(target => {
+			if (addClass) addClass.forEach(classname => target.classList.add(classname))
+			if (removeClass) removeClass.forEach(classname => target.classList.remove(classname))
+			if (toggleClass) toggleClass.forEach(classname => target.classList.toggle(classname))
+		})
 	}
 }
 
