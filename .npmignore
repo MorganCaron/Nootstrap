@@ -1,6 +1,5 @@
 /.github
 node_modules/
-!/build
 /src/docs
 .babelrc
 tsconfig.json
