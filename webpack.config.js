@@ -7,7 +7,6 @@ module.exports = (env, argv) => {
 		mode: argv.mode,
 		entry: {
 			Nootstrap: ["./src/sass/Nootstrap.sass", "./src/ts/Nootstrap.ts"]
-		},
-		index: null
+		}
 	});
 };
