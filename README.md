@@ -10,6 +10,7 @@ Although it is excellent, **too many people use it without customizing the defau
 ![Github Stars](https://img.shields.io/github/stars/MorganCaron/Nootstrap?style=for-the-badge)
 ![Github Forks](https://img.shields.io/github/forks/MorganCaron/Nootstrap?style=for-the-badge)
 [![Discord](https://img.shields.io/discord/268838260153909249?label=Chat&logo=Discord&style=for-the-badge)](https://discord.gg/mxZvun4)
+[![Contribute](https://img.shields.io/badge/-Contribute-blue?style=for-the-badge)](CONTRIBUTING.md)
 
 ### Project Health
 [![Codacy](https://img.shields.io/codacy/grade/c6b8bceeb4884d39b657e8a3fa460376?logo=Codacy&style=for-the-badge)](https://www.codacy.com/manual/MorganCaron/Nootstrap)
@@ -17,9 +18,46 @@ Although it is excellent, **too many people use it without customizing the defau
 
 ---
 
-## Getting Started
-[![Install](https://img.shields.io/badge/-Install-blue?style=for-the-badge)](INSTALL.md)
-[![Contribute](https://img.shields.io/badge/-Contribute-blue?style=for-the-badge)](CONTRIBUTING.md)
+## Prerequisites
+
+You need [NodeJS](https://nodejs.org/en/download/) installed on your computer.
+You also need a Sass compiler. Personally I use [Webpack](https://webpack.js.org), with a home-made configuration generator: [webpack-config-generator](https://github.com/MorganCaron/webpack-config-generator).
+If you're looking for a simpler, more minimalist tool just for compiling Sass, the [Compass.app](https://compass.kkbox.com) tool does the job.
+
+## Installation
+
+Nootstrap is available on the NPM package manager. It can be installed with the following command:
+
+```console
+npm install nootstrap-ui
+```
+
+## Include in your project
+
+Different ways to import the Javascript file from Nootstrap:
+
+### HTML
+```html
+<script defer src="~nootstrap-ui/build/Nootstrap.min.js"></script>
+```
+OR
+### Javascript
+```js
+import "nootstrap-ui";
+```
+OR
+### Typescript
+```ts
+import "nootstrap-ui"
+```
+
+And a way to import the Sass file:
+
+### Sass
+```sass
+@import nootstrap-ui
+```
+
 
 ## Documentation
 
