@@ -6,8 +6,9 @@ module.exports = (env, argv) => {
 	return webpackConfigGenerator({
 		mode: argv.mode,
 		entry: {
-			Nootstrap: ["./src/sass/Nootstrap.sass", "./src/ts/Nootstrap.ts"]
+			app: ["./src/ts/App.ts", "./src/sass/style.sass"]
 		},
-		index: null
+		index: "src/index.html",
+		favicon: "./src/favicon.png"
 	});
 };
