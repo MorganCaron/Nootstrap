@@ -1,5 +1,5 @@
 # Nootstrap
-[![Nootstrap](src/docs/img/assets/nootnoot.gif)](https://morgancaron.github.io/Nootstrap/)
+[![Nootstrap](nootnoot.gif)](https://morgancaron.github.io/Nootstrap/)
 
 ## *Not Bootstrap: Sass Front-End Web Framework*
 You probably know **Bootstrap**, the framework that provides a collection of tools useful for creating website and web application design.\
@@ -14,7 +14,7 @@ Although it is excellent, **too many people use it without customizing the defau
 
 ### Project Health
 [![Codacy](https://img.shields.io/codacy/grade/c6b8bceeb4884d39b657e8a3fa460376?logo=Codacy&style=for-the-badge)](https://www.codacy.com/manual/MorganCaron/Nootstrap)
-[![Github Actions](https://img.shields.io/github/workflow/status/MorganCaron/Nootstrap/NodeJS%20Deployment?logo=Github&style=for-the-badge)](https://github.com/MorganCaron/Nootstrap/actions?query=workflow%3A%22NodeJS+Deployment%22)
+[![Github Actions](https://img.shields.io/github/workflow/status/MorganCaron/Nootstrap/Documentation%20deployment?logo=Github&style=for-the-badge)](https://github.com/MorganCaron/Nootstrap/actions?query=workflow%3A%22Documentation+deployment%22)
 
 ---
 
