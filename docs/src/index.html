@@ -59,20 +59,15 @@
 			<h3>Include in your project</h3>
 			<div class="row">
 				<div class="col-md">
-					<p class="lead">Different ways to import the Javascript file from Nootstrap:</p>
-					<h4>HTML</h4>
-					<pre class="language-html"><code>&lt;script defer src="~nootstrap-ui/build/Nootstrap.min.js"&gt;&lt;/script&gt;</code></pre>
-					<p class="lead text-center">OR</p>
-					<h4>Javascript</h4>
-					<pre class="language-js">import "nootstrap-ui";</code></pre>
-					<p class="lead text-center">OR</p>
-					<h4>Typescript</h4>
-					<pre class="language-ts">import "nootstrap-ui"</code></pre>
-				</div>
-				<div class="col-md">
-					<p class="lead">And a way to import the Sass file:</p>
 					<h4>Sass</h4>
 					<pre class="language-sass"><code>@import nootstrap-ui</code></pre>
+				</div>
+				<div class="col-md">
+					<h4>Javascript or Typescript</h4>
+					<pre class="language-js"><code>import Nootstrap from "nootstrap-ui";
+window.addEventListener('load', () => {
+const nootstrap = new Nootstrap();
+}, false);</code></pre>
 				</div>
 			</div>
 
