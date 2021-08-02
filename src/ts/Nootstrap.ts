@@ -42,6 +42,4 @@ class Nootstrap {
 	}
 }
 
-window.addEventListener('load', () => {
-	const nootstrap = new Nootstrap()
-}, false)
+export default Nootstrap
